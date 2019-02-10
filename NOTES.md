@@ -50,6 +50,7 @@ Check out Mike C. Frank's course on this which has some great lectures and slide
 - Multi-level models
 - Making plots and figures
 - Making tables
+- Informed consent/Institutional review boards
 - Tidy data formats
 
 # Possible labs
@@ -62,4 +63,21 @@ Check out Mike C. Frank's course on this which has some great lectures and slide
 - Choice prediction challenge dataset (big data)
 - Semantic search in memory?
 - baby names data?
+- Speed accuracy tradeoffs
+- recall versus recognition?
+- Spaced versus massed practice?
 - Similarity ratings and MDS (ala jess's intro)?
+- Sound localization?
+- visual search?
+- working memory capacity
+- memory decay (like acquisition and retention functions)
+
+
+Considerations: 
+
+- can you get a big enough N within a small class?
+- is the phenomena robust
+- does it expose an interesting but simple analysis?
+- does it relate to student's lives in anyway? (e.g., how best to study?, etc...)
+- does it inspire "joy"?
+
