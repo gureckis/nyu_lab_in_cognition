@@ -4,3 +4,27 @@
     margin-right: 5px;
     float: left;
 }
+
+
+table.schedule {
+	
+
+}
+
+.schedule table th {
+  background: #D0E4F5;
+}
+
+.schedule table td {
+  font-size: 10pt;
+}
+
+.small {
+	font-size: 9pt;
+}
+
+.caption {
+	margin-left: 45px;
+	font-size: 10pt;
+	margin-bottom: 15px;
+}

@@ -27,23 +27,64 @@
   not_numbered: true
 
 - title: Syllabus
-  url: /features/syllabus
+  url: /course-content/syllabus
   not_numbered: true
 
+- title: Schedule
+  url: /course-content/schedule
+  not_numbered: true
 
 # Adds a searchbar link
 - title: Search
   search: true
 
+- divider: true
+
+- header: Resources
+
+# External link
+- title: JupyterHub
+  url: http://labincp.jupyter.hpc.nyu.edu
+  external: true
+  not_numbered: true
+
+- title: Piazza
+  url: https://piazza.com/class/k059qm82ubi6s8
+  external: true
+  not_numbered: true
+
+# External link
+- title: GitHub repository
+  url: https://github.com/gureckis/nyu_lab_in_cognition
+  external: true
+  not_numbered: true
+
 # Divider for meta-pages and content page
-#- divider: true
+- divider: true
 
 # Add a header and sample content section
-#- header: Course Overview
+#- header: Textbook
 
 # A chapter w/ a collection of sections beneath it
-# - title: Lectures
-#   url: /features/features
+#- title: What is Cognitive Science?
+#  url: /chapters/00/00-cogsci
+
+#- title: Why Statistics?
+#  url: /chapters/01/00-whystats
+  # sections:
+  # - title: Introduction
+  #   url: /01/1/intro
+  # - title: Why Data Science?
+  #   url: /01/2/why-data-science
+  # - title: Plotting the Classics
+  #   url: /01/3/Plotting_the_Classics
+  #   subsections:
+  #   - title: Subsection Demo 1
+  #     url: /01/3/subsection/subsections
+  #   - title: Subsection Demo 2
+  #     url: /01/3/subsection/subsectiontwo
+#- title: Readings
+#   url: /Chapters
 #   not_numbered: true
 # - title: Labs
 #   url: /features/features
@@ -56,17 +97,3 @@
 #   - title: Lab 2
 #     url: /features/notebooks
 #     not_numbered: true
-
-- divider: true
-
-# External link
-- title: JupyterHub
-  url: http://labincp.jupyter.hpc.nyu.edu
-  external: true
-  not_numbered: true
-
-# External link
-- title: GitHub repository
-  url: https://github.com/gureckis/nyu_lab_in_cognition
-  external: true
-  not_numbered: true

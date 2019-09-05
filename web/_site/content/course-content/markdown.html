@@ -7,15 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,minimum-scale=1">
 
-  <title>Search the site</title>
+  <title>Creating book content</title>
   <meta name="description" content="This is the Lab in Cognition and Perception at NYU for Fall 2019.">
 
-  <link rel="canonical" href="http://0.0.0.0:4000/courses/fall19/labincp/search">
+  <link rel="canonical" href="http://0.0.0.0:4000/courses/fall19/labincp/content/course-content/markdown.html">
   <link rel="alternate" type="application/rss+xml" title="Lab in C&P" href="http://0.0.0.0:4000/courses/fall19/labincp/feed.xml">
 
-  <meta property="og:url"         content="http://0.0.0.0:4000/courses/fall19/labincp/search" />
+  <meta property="og:url"         content="http://0.0.0.0:4000/courses/fall19/labincp/content/course-content/markdown.html" />
 <meta property="og:type"        content="article" />
-<meta property="og:title"       content="Search the site" />
+<meta property="og:title"       content="Creating book content" />
 <meta property="og:description" content="This is the Lab in Cognition and Perception at NYU for Fall 2019." />
 <meta property="og:image"       content="" />
 
@@ -25,9 +25,9 @@
   "@context": "http://schema.org",
   "@type": "NewsArticle",
   "mainEntityOfPage":
-    "http://0.0.0.0:4000/courses/fall19/labincp/search",
+    "http://0.0.0.0:4000/courses/fall19/labincp/content/course-content/markdown.html",
   "headline":
-    "Search the site",
+    "Creating book content",
   "datePublished":
     "2019-09-04T19:06:41-05:00",
   "dateModified":
@@ -576,6 +576,13 @@ initFunction(initQuery);
 </nav>
 
       
+      <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+      <aside class="sidebar__right">
+          <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
+          <nav class="onthispage">
+          </nav>
+      </aside>
+      
       <main class="c-textbook__page" tabindex="-1">
           <div class="o-wrapper">
             <div class="c-sidebar-toggle">
@@ -594,55 +601,53 @@ initFunction(initQuery);
             
 
             <div class="c-textbook__content">
-              <div class="search-content__inner-wrap">
-    <input type="text" id="lunr_search" class="search-input" tabindex="-1" placeholder="'Enter your search term...''" />
-    <div id="results" class="results"></div>
-</div>
+              <h1 id="creating-book-content">Creating book content</h1>
 
-<script>
-    // Add the lunr store since we will now search it
-    var store = [{
-        "title": "What is Cognitive Science?",
-        
-        "excerpt":
-            "Why do we learn statistics? “Thou shalt not answer questionnaires Or quizzes upon World Affairs, Nor with compliance Take any test. Thou shalt not sit With statisticians nor commit” – W.H. Auden^[The quote comes from Auden’s 1946 poem Under Which Lyre: A Reactionary Tract for the Times, delivered as part of a commencement address at Harvard University. The history of the poem is kind of interesting: http://harvardmagazine.com/2007/11/a-poets-warning.html] On the psychology of statistics{#whywhywhy} To the surprise of many students, statistics is a fairly significant part of a psychological education. To the surprise of no-one, statistics is very rarely the favourite part...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/courses/fall19/labincp/chapters/00/00-cogsci.html",
-        "teaser":null},{
-        "title": "Why Statistics?",
-        
-        "excerpt":
-            "Why do we learn statistics? “Thou shalt not answer questionnaires Or quizzes upon World Affairs, Nor with compliance Take any test. Thou shalt not sit With statisticians nor commit” -W.H. Auden [^quote] On the psychology of statistics To the surprise of many students, statistics is a fairly significant part of a psychological education. To the surprise of no-one, statistics is very rarely the favourite part of one’s psychological education. After all, if you really loved the idea of doing statistics, you’d probably be enrolled in a statistics class right now, not a psychology class. So, not surprisingly, there’s a pretty...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/courses/fall19/labincp/chapters/01/00-whystats.html",
-        "teaser":null},{
-        "title": "Schedule",
-        
-        "excerpt":
-            "Schedule This is the schedule for the semester. This page will be frequently updated based on how we progress and everything is subject to change. Homeworks and links to the lecture will be provided here for easy reference to the calendar. Date Lecture Lab Wed, Sept 4 Introductions, course policies – HW1 - Due Sun Sept 8th – Mon, Sept 9 What is cognitive science? Introduction to Jupyter Accessing JupyterHub, Basics of Jupyter, python, and markdown Wed, Sept 11 Why do we do statistics? intro to Python: Indenting, variables, functions, importing libraries Mon, Sept 16 What is an experiment? Lists...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/courses/fall19/labincp/course-content/schedule.html",
-        "teaser":null},{
-        "title": "Syllabus",
-        
-        "excerpt":
-            "Fall 2019 LAB IN COGNITION AND PERCEPTION Instructors Professor: Todd Gureckis, PhD Email: todd.gureckis@nyu.edu Office Hours: Monday 3-4pm, or by appointment Office: Meyer 859 Teaching Assistant: Hillary Raab Email: har292@nyu.edu Office Hours: Wednesday 12-1pm, or by appointment Office: Meyer 888 Place and Time Meyer 159 MW: 10-11:50 Textbook You are looking at it! You will refer to this website for reading, lecture slides, and other exercises. Sometimes links will be provided to other websites and videos. Assignments The grade in the course will be determined by the following categories: Class Participation (10% of grade) Attendance and participation in lectures and...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/courses/fall19/labincp/course-content/syllabus.html",
-        "teaser":null},{
-        "title": "Home",
-        
-        "excerpt":
-            "Lab in Cognition and Perception This course provides hands-on experience with the tools and practices used in psychological research. Students learn how to use a computer to collect, analyze, and report psychological data concerning a variety aspects of human cognition and perception. By the end of the course students will have an first hand understanding of how to run psychological experiments, collect and analyze data, and write research reports. In addition to methods, the course will expose students to key concepts in cognition and perception including intelligence, learning, memory, attention, visual perception, mental imagery and imagination, and cognitive neuroscience. Data...",
-        "categories": [],
-        "tags": [],
-        "url": "http://0.0.0.0:4000/courses/fall19/labincp/intro.html",
-        "teaser":null},]
-</script>
+<p>The two kinds of files that contain course content are:</p>
+
+<ul>
+  <li>Jupyter Notebooks</li>
+  <li>Markdown files</li>
+</ul>
+
+<p>Each are contained in the <code class="highlighter-rouge">content/</code> folder and referenced from <code class="highlighter-rouge">_data/toc.yml</code>.</p>
+
+<p>If the file is markdown, it will be copied over with front-matter YAML added so
+that Jekyll can parse it</p>
+
+<h2 id="sidebars-with-jekyll">Sidebars with Jekyll</h2>
+
+<p>You may notice that there’s a sidebar to the right (if your screen is wide enough).
+These are automatically generated from the headers that are present in your page.
+The sidebar will automatically capture all 2nd and 3rd level section headers.
+The best way to designate these headers is with <code class="highlighter-rouge">#</code> characters at the beginning
+of a line.</p>
+
+<h3 id="heres-a-third-level-header">Here’s a third-level header</h3>
+
+<p>This section is here purely to demonstrate the third-level header of the
+rendered page!</p>
+
+<h2 id="embedding-media">Embedding media</h2>
+
+<h3 id="adding-images">Adding images</h3>
+
+<p>You can reference external media like images from your markdown file. If you use
+relative paths, then they will continue to work when the markdown files are copied over,
+so long as they point to a file that’s inside of the repository.</p>
+
+<p>Here’s an image relative to the site root</p>
+
+<p><img src="/courses/fall19/labincp/content/images/C-3PO_droid.png" alt="" /></p>
+
+<h3 id="adding-movies">Adding movies</h3>
+
+<p>You can even embed references to movies on the web! For example, here’s a little gif for you!</p>
+
+<p><img src="https://media.giphy.com/media/yoJC2A59OCZHs1LXvW/giphy.gif" alt="" /></p>
+
+<p>This will be included in your website when it is built.</p>
+
               <nav class="c-page__nav">
   
 
