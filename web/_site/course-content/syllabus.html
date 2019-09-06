@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,minimum-scale=1">
+
+  <title>Syllabus</title>
+  <meta name="description" content="">
+
+  <link rel="canonical" href="http://0.0.0.0:4000/courses/fall19/labincp/course-content/syllabus.html">
+  <link rel="alternate" type="application/rss+xml" title="Lab in C&P" href="http://0.0.0.0:4000/courses/fall19/labincp/feed.xml">
+
+  <meta property="og:url"         content="http://0.0.0.0:4000/courses/fall19/labincp/course-content/syllabus.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Syllabus" />
+<meta property="og:description" content="" />
+<meta property="og:image"       content="http://0.0.0.0:4000/courses/fall19/labincp/images/logo/artificialintelligence.svg" />
+
+<meta name="twitter:card" content="summary">
+
+
+  <script type="application/ld+json">
+  {
+  "@context": "http://schema.org",
+  "@type": "NewsArticle",
+  "mainEntityOfPage":
+    "http://0.0.0.0:4000/courses/fall19/labincp/course-content/syllabus.html",
+  "headline":
+    "Syllabus",
+  "datePublished":
+    "2019-09-06T10:31:50-05:00",
+  "dateModified":
+    "2019-09-06T10:31:50-05:00",
+  "description":
+    "",
+  "author": {
+    "@type": "Person",
+    "name": "Todd M. Gureckis"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Data 100 at UC Berkeley",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://0.0.0.0:4000/courses/fall19/labincp",
+      "width": 60,
+      "height": 60
+    }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http://0.0.0.0:4000/courses/fall19/labincp",
+    "height": 60,
+    "width": 60
+  }
+}
+
+  </script>
+  <link rel="stylesheet" href="/courses/fall19/labincp/assets/css/styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css ">
+
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#efae0a"> -->
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="theme-color" content="#233947">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="/courses/fall19/labincp/images/logo/favicon.ico">
+
+  <!-- MathJax Config -->
+  <!-- Allow inline math using $ and automatically break long math lines -->
+<!-- (mostly) copied from nbconvert configuration -->
+<!-- https://github.com/jupyter/nbconvert/blob/master/nbconvert/templates/html/mathjax.tpl -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true,
+        processEnvironments: true
+    },
+    // Center justify equations in code and markdown cells. Elsewhere
+    // we use CSS to left justify single line equations in code cells.
+    displayAlign: 'center',
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}},
+        linebreaks: { automatic: true },
+    }
+});
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML' async></script>
+
+  <!-- DOM updating function -->
+  <script>
+const runWhenDOMLoaded = cb => {
+  if (document.readyState != 'loading') {
+    cb()
+  } else if (document.addEventListener) {
+    document.addEventListener('DOMContentLoaded', cb)
+  } else {
+    document.attachEvent('onreadystatechange', function() {
+      if (document.readyState == 'complete') cb()
+    })
+  }
+}
+
+// Helper function to init things quickly
+initFunction = function(myfunc) {
+  runWhenDOMLoaded(myfunc);
+  document.addEventListener('turbolinks:load', myfunc);
+};
+</script>
+
+  <!-- Define some javascript variables that will be useful in other javascript -->
+  <script>
+    const site_basename = '/courses/fall19/labincp';
+  </script>
+
+  <!-- Add AnchorJS to let headers be linked -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js" async></script>
+  <script>
+const initAnchors = () => {
+  if (window.anchors === undefined) {
+    setTimeout(initAnchors, 250)
+    return
+  }
+  anchors.add("main h1, main h2, main h3, main h4")
+}
+
+initFunction(initAnchors);
+</script>
+
+
+  <!-- Include Turbolinks to make page loads fast -->
+  <!-- https://github.com/turbolinks/turbolinks -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/turbolinks/5.2.0/turbolinks.js" async></script>
+  <meta name="turbolinks-cache-control" content="no-cache">
+
+  <!-- Selectors for elements on the page -->
+  <script>
+/**
+ * Select various elements on the page for later use
+ */
+
+// IDs we'll attach to cells
+const codeCellId = index => `codecell${index}`
+const inputCellId = index => `inputcell${index}`
+
+pageElements = {}
+
+// All code cells
+findCodeCells = function() {
+    var codeCells = document.querySelectorAll('div.c-textbook__content > div.highlighter-rouge > div.highlight > pre, div.input_area pre, div.text_cell_render div.highlight pre')
+    pageElements['codeCells'] = codeCells;
+
+    codeCells.forEach((codeCell, index) => {
+      const id = codeCellId(index)
+      codeCell.setAttribute('id', id)
+    })
+};
+
+initFunction(findCodeCells);
+
+// All cells in general
+findInputCells = function() {
+    var inputCells = document.querySelectorAll('div.jb_cell')
+    pageElements['inputCells'] = inputCells;
+
+    inputCells.forEach((inputCell, index) => {
+        const id = inputCellId(index)
+        inputCell.setAttribute('id', id)
+    })
+};
+
+initFunction(findInputCells);
+</script>
+
+  <!-- Load nbinteract for widgets -->
+  
+
+  <!-- Load Thebelab for interactive widgets -->
+  <!-- Include Thebelab for interactive code if it's enabled -->
+
+
+
+  <!-- Load the auto-generating TOC -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js" async></script>
+<script>
+const initToc = () => {
+  if (window.tocbot === undefined) {
+    setTimeout(initToc, 250)
+    return
+  }
+
+  tocbot.init({
+    tocSelector: 'nav.onthispage',
+    contentSelector: '.c-textbook__content',
+    headingSelector: 'h2, h3',
+    orderedList: false,
+    collapseDepth: 6,
+    listClass: 'toc__menu',
+    activeListItemClass: "",  // Not using
+    activeLinkClass: "", // Not using
+  });
+
+}
+initFunction(initToc);
+</script>
+
+
+  <!-- Google analytics -->
+  <script src="/courses/fall19/labincp/assets/js/ga.js" async></script>
+
+  <!-- Clipboard copy button -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script>
+
+  <!-- Load custom website scripts -->
+  <script src="/courses/fall19/labincp/assets/js/scripts.js" async></script>
+
+  <!-- Load custom user CSS and JS  -->
+  <script src="/courses/fall19/labincp/assets/custom/custom.js" async></script>
+  <link rel="stylesheet" href="/courses/fall19/labincp/assets/custom/custom.css">
+
+  <!-- Update interact links w/ REST param, is defined in includes so we can use templates -->
+  
+
+  <!-- Lunr search code - will only be executed on the /search page -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.6/lunr.min.js" async></script>
+  <script>var initQuery = function() {
+  // See if we have a search box
+  var searchInput = document.querySelector('input#lunr_search');
+  if (searchInput === null) {
+    return;
+  }
+
+  // Function to parse our lunr cache
+  var idx = lunr(function () {
+    this.field('title')
+    this.field('excerpt')
+    this.field('categories')
+    this.field('tags')
+    this.ref('id')
+
+    this.pipeline.remove(lunr.trimmer)
+
+    for (var item in store) {
+      this.add({
+        title: store[item].title,
+        excerpt: store[item].excerpt,
+        categories: store[item].categories,
+        tags: store[item].tags,
+        id: item
+      })
+    }
+  });
+
+  // Run search upon keyup
+  searchInput.addEventListener('keyup', function () {
+    var resultdiv = document.querySelector('#results');
+    var query = document.querySelector("input#lunr_search").value.toLowerCase();
+    var result =
+      idx.query(function (q) {
+        query.split(lunr.tokenizer.separator).forEach(function (term) {
+          q.term(term, { boost: 100 })
+          if(query.lastIndexOf(" ") != query.length-1){
+            q.term(term, {  usePipeline: false, wildcard: lunr.Query.wildcard.TRAILING, boost: 10 })
+          }
+          if (term != ""){
+            q.term(term, {  usePipeline: false, editDistance: 1, boost: 1 })
+          }
+        })
+      });
+
+      // Empty the results div
+      while (resultdiv.firstChild) {
+        resultdiv.removeChild(resultdiv.firstChild);
+      }
+
+    resultdiv.insertAdjacentHTML('afterbegin', '<p class="results__found">'+result.length+' Result(s) found</p>');
+    for (var item in result) {
+      var ref = result[item].ref;
+      if(store[ref].teaser){
+        var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<div class="archive__item-teaser">'+
+                '<img src="'+store[ref].teaser+'" alt="">'+
+              '</div>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      else{
+    	  var searchitem =
+          '<div class="list__item">'+
+            '<article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">'+
+              '<h2 class="archive__item-title" itemprop="headline">'+
+                '<a href="'+store[ref].url+'" rel="permalink">'+store[ref].title+'</a>'+
+              '</h2>'+
+              '<p class="archive__item-excerpt" itemprop="description">'+store[ref].excerpt.split(" ").splice(0,20).join(" ")+'...</p>'+
+            '</article>'+
+          '</div>';
+      }
+      resultdiv.insertAdjacentHTML('beforeend', searchitem);
+    }
+  });
+};
+
+initFunction(initQuery);
+</script>
+
+  <!-- Load JS that depends on site variables -->
+  <script>
+/**
+ * Set up copy/paste for code blocks
+ */
+const clipboardButton = id =>
+  `<a id="copy-button-${id}" class="btn copybtn o-tooltip--left" data-tooltip="Copy" data-clipboard-target="#${id}">
+    <img src="/courses/fall19/labincp/assets/images/copy-button.svg" alt="Copy to clipboard">
+  </a>`
+
+// Clears selected text since ClipboardJS will select the text when copying
+const clearSelection = () => {
+  if (window.getSelection) {
+    window.getSelection().removeAllRanges()
+  } else if (document.selection) {
+    document.selection.empty()
+  }
+}
+
+// Changes tooltip text for two seconds, then changes it back
+const temporarilyChangeTooltip = (el, newText) => {
+  const oldText = el.getAttribute('data-tooltip')
+  el.setAttribute('data-tooltip', newText)
+  setTimeout(() => el.setAttribute('data-tooltip', oldText), 2000)
+}
+
+const addCopyButtonToCodeCells = () => {
+  // If ClipboardJS hasn't loaded, wait a bit and try again. This
+  // happens because we load ClipboardJS asynchronously.
+  if (window.ClipboardJS === undefined) {
+    setTimeout(addCopyButtonToCodeCells, 250)
+    return
+  }
+
+  pageElements['codeCells'].forEach((codeCell) => {
+    const id = codeCell.getAttribute('id')
+    if (document.getElementById("copy-button" + id) == null) {
+      codeCell.insertAdjacentHTML('afterend', clipboardButton(id));
+    }
+  })
+
+  const clipboard = new ClipboardJS('.copybtn')
+  clipboard.on('success', event => {
+    clearSelection()
+    temporarilyChangeTooltip(event.trigger, 'Copied!')
+  })
+
+  clipboard.on('error', event => {
+    temporarilyChangeTooltip(event.trigger, 'Failed to copy')
+  })
+
+  // Get rid of clipboard before the next page visit to avoid memory leak
+  document.addEventListener('turbolinks:before-visit', () =>
+    clipboard.destroy()
+  )
+}
+
+initFunction(addCopyButtonToCodeCells);
+</script>
+
+
+  <!-- Hide cell code -->
+  <script>
+    /**
+    Add buttons to hide code cells
+    */
+
+
+    var setCodeCellVisibility = function (inputField, kind) {
+        // Update the image and class for hidden
+        var id = inputField.getAttribute('data-id');
+        var codeCell = document.querySelector(`#${id} div.highlight`);
+
+        if (kind === "visible") {
+            codeCell.classList.remove('hidden');
+            inputField.checked = true;
+        } else {
+            codeCell.classList.add('hidden');
+            inputField.checked = false;
+        }
+    }
+
+    var toggleCodeCellVisibility = function (event) {
+        // The label is clicked, and now we decide what to do based on the input field's clicked status
+        if (event.target.tagName === "LABEL") {
+            var inputField = event.target.previousElementSibling;
+        } else {
+            // It is the span inside the target
+            var inputField = event.target.parentElement.previousElementSibling;
+        }
+
+        if (inputField.checked === true) {
+            setCodeCellVisibility(inputField, "visible");
+        } else {
+            setCodeCellVisibility(inputField, "hidden");
+        }
+    }
+
+
+    // Button constructor
+    const hideCodeButton = id => `<input class="hidebtn" type="checkbox" id="hidebtn${id}" data-id="${id}"><label title="Toggle cell" for="hidebtn${id}" class="plusminus"><span class="pm_h"></span><span class="pm_v"></span></label>`
+
+    var addHideButton = function () {
+        // If a hide button is already added, don't add another
+        if (document.querySelector('div.tag_hide_input input') !== null) {
+            return;
+        }
+
+        // Find the input cells and add a hide button
+        pageElements['inputCells'].forEach(function (inputCell) {
+            if (!inputCell.classList.contains("tag_hide_input")) {
+                // Skip the cell if it doesn't have a hidecode class
+                return;
+            }
+
+            const id = inputCell.getAttribute('id')
+
+            // Insert the button just inside the end of the next div
+            inputCell.querySelector('div.input').insertAdjacentHTML('beforeend', hideCodeButton(id))
+
+            // Set up the visibility toggle
+            hideLink = document.querySelector(`#${id} div.inner_cell + input + label`);
+            hideLink.addEventListener('click', toggleCodeCellVisibility)
+        });
+    }
+
+
+    // Initialize the hide buttos
+    var initHiddenCells = function () {
+        // Add hide buttons to the cells
+        addHideButton();
+
+        // Toggle the code cells that should be hidden
+        document.querySelectorAll('div.tag_hide_input input').forEach(function (item) {
+            setCodeCellVisibility(item, 'hidden');
+            item.checked = true;
+        })
+    }
+
+    initFunction(initHiddenCells);
+
+</script>
+
+  <!-- Printing the screen -->
+  <!-- Include nbinteract for interactive widgets -->
+<script src="https://printjs-4de6.kxcdn.com/print.min.js" async></script>
+<script>
+printContent = () => {
+    // MathJax displays a second version of any math for assistive devices etc.
+    // This prevents double-rendering in the PDF output.
+    var ignoreAssistList = [];
+    assistives = document.querySelectorAll('.MathJax_Display span.MJX_Assistive_MathML').forEach((element, index) => {
+        var thisId = 'MathJax-assistive-' + index.toString();
+        element.setAttribute('id', thisId);
+        ignoreAssistList.push(thisId)
+    });
+
+    // Print the actual content object
+    printJS({
+        printable: 'textbook_content',
+        type: 'html',
+        css: "/courses/fall19/labincp/assets/css/styles.css",
+        scanStyles: false,
+        targetStyles: ["*"],
+        ignoreElements: ignoreAssistList
+    })
+};
+
+initPrint = () => {
+    document.querySelector('#interact-button-print').addEventListener('click', printContent)
+}
+
+initFunction(initPrint)
+</script>
+
+</head>
+
+  <body>
+    <!-- .js-show-sidebar shows sidebar by default -->
+    <div id="js-textbook" class="c-textbook js-show-sidebar">
+      
+
+
+
+<nav id="js-sidebar" class="c-textbook__sidebar">
+  <a href="http://gureckislab.org/courses/fall19/labincp"><img src="/courses/fall19/labincp/images/logo/artificialintelligence.svg" class="textbook_logo" id="sidebar-logo" data-turbolinks-permanent/></a>
+  <h2 class="c-sidebar__title">Lab in C&P</h2>
+  <ul class="c-sidebar__chapters">
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/courses/fall19/labincp/intro.html"
+        >
+          
+          Home
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry c-sidebar__entry--active"
+          href="/courses/fall19/labincp/course-content/syllabus.html"
+        >
+          
+          Syllabus
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="/courses/fall19/labincp/course-content/schedule.html"
+        >
+          
+          Schedule
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+      
+      
+        <li><h2 class="c-sidebar__title">Resources</li>
+        
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="http://labincp.jupyter.hpc.nyu.edu"
+        >
+          
+          JupyterHub
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="https://piazza.com/class/k059qm82ubi6s8"
+        >
+          
+          Piazza
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+
+      
+      
+
+      
+      
+      <li class="c-sidebar__chapter">
+        <a class="c-sidebar__entry "
+          href="https://github.com/gureckis/nyu_lab_in_cognition"
+        >
+          
+          GitHub repository
+        </a>
+
+        
+      </li>
+
+      
+    
+      
+      
+        <li class="c-sidebar__divider"></li>
+        
+  </ul>
+  <p class="sidebar_footer">Powered by <a href="https://github.com/jupyter/jupyter-book">Jupyter Book</a></p>
+</nav>
+
+      
+      <div class="c-topbar" id="top-navbar">
+  <!-- We show the sidebar by default so we use .is-active -->
+  <div class="c-topbar__buttons">
+    <button
+      id="js-sidebar-toggle"
+      class="hamburger hamburger--arrowalt is-active"
+    >
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <div class="buttons">
+<div class="download-buttons-dropdown">
+    <button id="dropdown-button-trigger" class="interact-button"><i class="fa fa-download"></i></button>
+    <div class="download-buttons">
+        
+        <a id="interact-button-print"><button id="interact-button-download" class="interact-button">PDF</button></a>
+    </div>
+</div>
+
+  
+  
+  
+  
+
+
+</div>
+
+  </div>
+  <!-- Empty sidebar placeholder that we'll auto-fill with javascript -->
+  <aside class="sidebar__right">
+    <header><h4 class="nav__title"><i class="fa fa-list"></i>   On this page</h4></header>
+    <nav class="onthispage">
+    </nav>
+  </aside>
+  <a href="/courses/fall19/labincp/search.html" class="topbar-right-button" id="search-button"><i class="fa fa-search"></i></a>
+</div>
+
+      <main class="c-textbook__page" tabindex="-1">
+            <div class="c-textbook__content" id="textbook_content">
+              <div class="jb_cell">
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Fall-2019">Fall 2019<a class="anchor-link" href="#Fall-2019"> </a></h3><h1 id="LAB-IN-COGNITION-AND-PERCEPTION">LAB IN COGNITION AND PERCEPTION<a class="anchor-link" href="#LAB-IN-COGNITION-AND-PERCEPTION"> </a></h1><h3 id="Instructors">Instructors<a class="anchor-link" href="#Instructors"> </a></h3><p>Professor: <a href="http://gureckislab.org">Todd Gureckis</a>, PhD<br>
+Email: todd.gureckis@nyu.edu<br>
+Office Hours: Monday 3-4pm, or by appointment<br>
+Office: Meyer 859</p>
+<p>Teaching Assistant: Hillary Raab<br>
+Email: har292@nyu.edu<br>
+Office Hours:  Wednesday 12-1pm, or by appointment<br>
+Office: Meyer 888</p>
+<h3 id="Place-and-Time">Place and Time<a class="anchor-link" href="#Place-and-Time"> </a></h3><p>Meyer 159
+MW: 10-11:50</p>
+<h3 id="Textbook">Textbook<a class="anchor-link" href="#Textbook"> </a></h3><p>You are looking at it!  You will refer to this website for reading, lecture slides, and other exercises.  Sometimes links will be provided to other websites and videos.</p>
+<h2 id="Assignments">Assignments<a class="anchor-link" href="#Assignments"> </a></h2><p>The grade in the course will be determined by the following categories:</p>
+<h3 id="Class-Participation-(10%-of-grade)">Class Participation (10% of grade)<a class="anchor-link" href="#Class-Participation-(10%-of-grade)"> </a></h3><p>Attendance and participation in lectures and labs is essential. There are in-class tasks and assignments in most class periods that cannot be made up later. Short quizzes will be assigned in class at the start of each lecture and will be a major part of the participation grade.</p>
+<h3 id="Homework-(20%-of-grade)">Homework (20% of grade)<a class="anchor-link" href="#Homework-(20%-of-grade)"> </a></h3><p>We will have fairly regular homeworks (at least once a week). These should not be too long or onerous and should let you develop your skill and practice material covered in class.  Often you will complete these assignments by filling out a webform or by completing some exercises on the class Jupyterhub instance and submitting your completed notebooks.</p>
+<h3 id="Labs-(30%-of-grade)">Labs (30% of grade)<a class="anchor-link" href="#Labs-(30%-of-grade)"> </a></h3><p>The later part of the course will consist of three lab units.  These labs will expose key concepts in the psychology of cognition and perception and will consist of multiple exercises and reports.  Most of this work will take place in the Jupyterhub.</p>
+<h3 id="Writing-Assignments-(15%-of-grade)">Writing Assignments (15% of grade)<a class="anchor-link" href="#Writing-Assignments-(15%-of-grade)"> </a></h3><p>At various times during the semester we will have written assignments which give you practice summarizing research results in paper form.  Rarely will this require writing an entire paper from scratch.  Instead, you will be ask to write sub-sections of a total article.</p>
+<h3 id="Final-Project-(25%-of-grade)">Final Project (25% of grade)<a class="anchor-link" href="#Final-Project-(25%-of-grade)"> </a></h3><p>The course builds to a final project which will be completed in groups.  The final project will involve designing and experiment, collecting the data, and analyzing it.  Students may work in small groups (~2-3 people), but each will independently write a final report of the research.  The final written paper should be in journal format using APA style with an abstract, intro, methods, results, discussion, and references. Format 12-20 typed double-space pages, 11pt Ariel or Times font. (bibliography not included in the page limit).  Each person is expected to write their own intro and conclusion, but the group can collaborate on the methods and results sections if they want.  At the end of the class each group will give a ~10 minute presentation on their project (background, hypothesis, experimental design, results, analyses, conclusions).  Paper Due at Midnight on the last day of class.</p>
+<ul>
+<li>Paper: 15%</li>
+<li>Presentation: 10%</li>
+</ul>
+<h2 id="Classroom-Policies">Classroom Policies<a class="anchor-link" href="#Classroom-Policies"> </a></h2><h3 id="Honor-code-and-plagarism">Honor code and plagarism<a class="anchor-link" href="#Honor-code-and-plagarism"> </a></h3><p>All work that students turn in must be their own work. For group assignments, all work must have been done by the students on the team and must include an acknowledgements section detailing the contribution of each team member. Any outside sources (articles, books, people) must be appropriately cited in written assignments. Turning in someone else's work as your own is unacceptable and will result in a failing grade. Written assignments will be run through a website that checks for plagarism and we have code that compares the submitted responses across class members. Most importantly, such behavior is academically dishonest and lazy. Submit only your own ideas and words.</p>
+<h3 id="Late-Assignments">Late Assignments<a class="anchor-link" href="#Late-Assignments"> </a></h3><p>All papers and presentations are due at the date and time specified.  Scores for late papers will be reduced by 10% for every 24-hour period a paper is late. No extensions will be granted due to computer failure, roommate difficulties, printing problems, etc.</p>
+<h3 id="Technology">Technology<a class="anchor-link" href="#Technology"> </a></h3><p>Computers and tablets may be used in class, but use of cell phones will not be permitted (no phone calls, ringers, or texting).</p>
+<h3 id="Disabilities">Disabilities<a class="anchor-link" href="#Disabilities"> </a></h3><p>Any student with a documented disability needing academic adjustments or accommodations is requested to speak with me by the end of the second week of the term.</p>
+<h3 id="Religious-observances">Religious observances<a class="anchor-link" href="#Religious-observances"> </a></h3><p>Some students may wish to take part in religious observances that occur during this academic term. If you have a religious observance which conflicts with your participation in the course, please meet with me by the end of the second week of the term to discuss appropriate accommodations.</p>
+<h2 id="Computing-Environment">Computing Environment<a class="anchor-link" href="#Computing-Environment"> </a></h2><p>The course will rely on a online computing environment called Jupyter.  Each student will have their own JupyterHub instance and can connect to this from a variety of devices over the internet.  The address of the class JupyterHub is <a href="http://labincp.jupyter.hpc.nyu.edu">http://labincp.jupyter.hpc.nyu.edu</a>.  You will log in with your normal NYUHome credentials.  You will have to have a HPC account created so check with the TA or instructor if it is not working for you.</p>
+<h2 id="Communication">Communication<a class="anchor-link" href="#Communication"> </a></h2><p>We will use a website called Piazza to facilitate discussion outside of class.  You can post questions about any of the course content and the TA or instructor will try their best to respond quickly.  By asking your question on the public forum you can learn from the questions and answers of your fellow students.  The link is here: <a href="https://piazza.com/class/k059qm82ubi6s8">https://piazza.com/class/k059qm82ubi6s8</a>.</p>
+<h2 id="Schedule">Schedule<a class="anchor-link" href="#Schedule"> </a></h2><p>Each class will be divided into two parts.  A lecture covering basic aspects of psychological research and a lab session teaching practical skills for data analysis, exploration, and stastistical reporting.  A link to the current schedule can be found <a href="schedule">here</a>.</p>
+
+</div>
+</div>
+</div>
+</div>
+
+ 
+
+
+            </div>
+            <nav class="c-page__nav">
+  
+    
+    <a id="js-page__nav__prev" class="c-page__nav__prev" href="/courses/fall19/labincp/intro.html">
+      〈 <span class="u-margin-right-tiny"></span> Home
+    </a>
+  
+
+  
+    
+    <a id="js-page__nav__next" class="c-page__nav__next" href="/courses/fall19/labincp/course-content/schedule.html">
+      Schedule <span class="u-margin-right-tiny"></span> 〉
+    </a>
+  
+</nav>
+
+            <footer>
+  <p class="footer">This page was created by <a href="https://github.com/jupyter/jupyter-book/graphs/contributors">The Jupyter Book Community</a></p>
+</footer>
+
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

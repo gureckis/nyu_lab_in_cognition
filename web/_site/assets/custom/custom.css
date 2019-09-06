@@ -1,0 +1,30 @@
+/* Put your custom CSS here */
+.left {
+    margin-left: 0px;
+    margin-right: 5px;
+    float: left;
+}
+
+
+table.tag_schedule {
+	
+
+}
+
+.tag_schedule table th {
+  background: #D0E4F5;
+}
+
+.tag_schedule table td {
+  font-size: 10pt;
+}
+
+.small {
+	font-size: 9pt;
+}
+
+.caption {
+	margin-left: 45px;
+	font-size: 10pt;
+	margin-bottom: 15px;
+}
