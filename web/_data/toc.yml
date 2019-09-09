@@ -56,18 +56,21 @@
   external: true
   not_numbered: true
 
-# Divider for meta-pages and content page
-- divider: true
+# # Divider for meta-pages and content page
+# - divider: true
 
-# Add a header and sample content section
-#- header: Textbook
+# # Add a header and sample content section
+# - header: Textbook
 
-# A chapter w/ a collection of sections beneath it
-#- title: What is Cognitive Science?
-#  url: /chapters/00/00-cogsci
+# # A chapter w/ a collection of sections beneath it
+# - title: What is Cognitive Science?
+#   url: /chapters/00/00-cogsci
 
-#- title: Why Statistics?
-#  url: /chapters/01/00-whystats
+# - title: Why Statistics?
+#   url: /chapters/01/00-whystats
+
+# - title: Intro to Research Design
+#   url: /chapters/02/00-researchdesign
   # sections:
   # - title: Introduction
   #   url: /01/1/intro
@@ -94,3 +97,9 @@
 #   - title: Lab 2
 #     url: /features/notebooks
 #     not_numbered: true
+
+- divider: true
+
+- title: License
+  url: /LICENSE
+  not_numbered: true

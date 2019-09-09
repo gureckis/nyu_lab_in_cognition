@@ -22,13 +22,4 @@ This course is useful for undergraduate students interested in getting actively 
 
 This course created by [Todd Gureckis][todd] with support of the Department of Psychology at New York University.  Selected elements borrowed and adapted from Danielle Navarro's [Learning Statistics with R](https://learningstatisticswithr.com), Matt Crump's [Answering Questions with Data](https://crumplab.github.io/statistics/), Luke Chang's [Introduction to fMRI Data Analysis](https://dartbrains.org), and resources developed by Clay Curtis and Liang Zhli via the Moore-Sloan Data Science Environment at NYU.
 
-*****
-
-### License
-
-<div class="small" markdown='1'>
-
-
-This course content is released under ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)) which means you are free to share the content and redistribute it in any medium for format.  You are also free to adapt these materials to remix, transform, and build upon them so long as you: give appropriate credit, provide a link to the license, and indicate if changes were made.  Also any changes you make must be released under the same license.
-</div>
 [todd]: http://www.gureckislab.org

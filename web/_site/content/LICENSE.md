@@ -1,5 +1,3 @@
 # License for this book
 
-All content in this book (ie, any files and content in the `content/` folder)
-is licensed under the [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
-(CC BY-SA 4.0) license.
+This course content is released under ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)) which means you are free to share the content and redistribute it in any medium for format.  You are also free to adapt these materials to remix, transform, and build upon them so long as you: give appropriate credit, provide a link to the license, and indicate if changes were made.  Also any changes you make must be released under the same license.
