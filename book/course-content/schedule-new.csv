@@ -1,0 +1,35 @@
+﻿**Date** , **Lecture** , **Lab** 
+:---,:---,:------
+"*Tues, Jan 28* ","Introductions, course policies.<br> What is cognitive science? Introduction to Jupyter<br>[<a href=""../lectures/lecture1.html"" data-turbolinks=""false"">Lecture 1</a>] <br>[<a href=""../chapters/00/00-cogsci"">Chapter 1</a>] - read before next class ","Accessing JupyterHub, basics of Jupyter, python, and markdown<br>[<a href=""https://forms.gle/Nqqm2LhR1x3Z53Kj7"">HW1: Pre-class Survey</a>] - Due Fri Jan 31st"
+"*Thurs, Jan 30* ","What is an experiment?  How does science use experiments to advance knowledge?<br>[<a href=""../lectures/lecture2.html"" data-turbolinks=""false"">Lecture 2</a>]<br>[<a href=""../chapters/01/00-whystats"">Chapter 2</a>] - read before next class ","Intro to Python: Numbers, variables<br>[<a href=""../labs/pythonintro.html"">Lab: Python Intro</a>]"
+"*Tues, Feb 4* ","Why do we do statistics?<br> -- [Lecture 2 continued] <br>[<a href=""../chapters/02/00-researchdesign"">Chapter 3</a>] - read before next class  ","Intro to Python continued: Indenting, using existing functions, importing libraries <br>[<a href=""../homeworks/homework2.html"">HW2: Intro to Jupyter</a>]"
+"*Thurs, Feb 6* ","Basic experiment Design: Randomization, stratification, counter-balancing, factorial designs<br>[<a href=""../lectures/lecture3b.html"" data-turbolinks=""false"">Lecture 3</a>]  ","Lists and dictionaries, Loops, and other control structures <br>[<a href=""../labs/pythonloops.html"">Lab: Python Loops</a>]"
+"*Tues, Feb 11* ","Measure, Reliability, and Validity <br>[<a href=""../lectures/lecture3b.html"" data-turbolinks=""false"">Lecture 3b</a>]",Intro to Python continued: Functions and organizing code blocks<br>[Lab: functions and code blocks] 
+"*Thurs, Feb 13* ","Replication crisis, HARKing, p-hacking, blinding, preregistration, open science <br>[<a href=""../lectures/lecture3c.html"" data-turbolinks=""false"">Lecture 3c</a>]","Intro to Python continued: Reading in data and manipulating it<br>[<a href=""../labs/dataframesplotting.html"">Lab: DataFrames and plotting</a>] "
+"*Tues, Feb 18* ","Measures of central tendency, variance<br>[<a href=""../lectures/lecture4.html"" data-turbolinks=""false"">Lecture 4</a>]  <br>[<a href=""../chapters/03/00-describingdata"">Chapter 4</a>] - read before next class <br>[<a href=""https://www.npr.org/2019/08/28/755191639/episode-936-the-modal-american"">Podcast</a>] - listen before class ", Tidy data formats and preparing data for analysis 
+"*Thurs, Feb 20* ","Random processes, probabilities, distributions, and sampling<br>[<a href=""../lectures/lecture5.html"" data-turbolinks=""false"">Lecture 5</a>]  <br>[<a href=""../chapters/04/00-probability"">Chapter 5.1</a>] - read before next class  "," Visualizing data with Seaborn<br>[<a href=""../labs/exploringdata.html"">Lab: Exploring Data</a>] "
+"*Tues, Feb 25* "," Exploratory Data Analysis<br>[<a href=""../chapters/04/01-sampling"">Chapter 5.1</a>] - read before next class  "," Accessing existing data sets<br>[<a href=""../homeworks/hw3/homework3.html"">HW3: Python for Data Analysis</a>]  "
+"*Thurs, Feb 27* "," Sampling and Estimation<br>[<a href=""../lectures/lecture5.html#84"" data-turbolinks=""false"">Lecture 5 (Cont)</a>]<br>[<a href=""../chapters/04/02-estimation"">Chapter 5.2</a>] - read before next class  ",Overview of writing a scientific paper
+"*Tues, Mar 3* "," Signal Detection Theory<br>[<a href=""../lectures/lecture9.html#1"" data-turbolinks=""false"">Lecture 9</a>] "," [<a href=""../labs/lab2sdt_pt1.html"">Lab 2: Signal Detection Theory</a>]"
+"*Thurs, Mar 5* "," Signal Detection Theory - Perception  <br>[<a href=""../chapters/11/00-ttest.html"">Chapter 12</a>] - read before next monday  "," [<a href=""../labs/lab2sdt_pt2.html"">Lab 2: Signal Detection Theory</a>]"
+"~~*Tues, Mar 10*~~ "," **No class, Spring break**  ", 
+"~~*Thurs, Mar 12*~~ ","   **No class, Spring break**  ", 
+"*Tues, Mar 17* ","Signal Detection Theory - Perception  <br>, T-test review<br>[<a href=""../lectures/lecture10.html"" data-turbolinks=""false"">Lecture 10</a>] "," [<a href=""../labs/lab2sdt_pt2.html"">Lab 2: Signal Detection Theory</a>]<br>[<a href=""../labs/lab2_ttest.html"">Lab 2: T-test lecture</a>]"
+"*Thurs, Mar 19* ",Signal Detection Theory - Memory," [<a href=""../labs/lab2sdt_pt2.html"">Lab 2: Signal Detection Theory</a>]<br>[<a href=""../labs/lab2_ttest.html"">Lab 2: T-test lecture</a>]"
+"*Tues, Mar 24* "," Relating multiple variables (correlation)<br>[<a href=""../lectures/lecture6.html"" data-turbolinks=""false"">Lecture 6</a>]<br>[<a href=""../chapters/05/00-correlation"">Chapter 6</a>] - read before next class  ",
+"*Thurs, Mar 26* ", Regression ," [<a href=""../labs/lab1introtoregression.html"">Lab: Intro to Regression</a>] "
+"*Tues, Mar 31* "," No lecture<br>[<a href=""../chapters/07/00-mentalsimulation"">Chapter 8</a>] - read before next monday "," [<a href=""../labs/lab1advancedregression.html"">Lab: Advanced Regression</a>] "
+"*Thurs, Apr 2* "," Mental Rotation/Simulation<br>[<a href=""../lectures/lecture7.html"" data-turbolinks=""false"">Lecture 7</a>] "," [<a href=""../labs/lab1advancedregression.html"">Lab: Advanced Regression</a>]"
+"*Tues, Apr 7* "," No lecture<br>[<a href=""../chapters/08/00-mri.html"">Chapter 9</a>] - read before next monday "," [<a href=""../labs/lab1mentalrotation.html"">Lab: Mental Rotation</a>]"
+"*Thurs, Apr 9* "," Functional Magnetic Resonance Imaging (fMRI) part 1<br>[<a href=""../lectures/lecture8.html"" data-turbolinks=""false"">Lecture 8</a>]<br>[<a href=""../chapters/09/00-hypothesistesting.html"">Chapter 10</a>] - read before next monday "," [<a href=""../labs/lab1mri-pt1.html"">Lab: fMRI</a>]"
+"*Tues, Apr 14* "," Hypothesis testing and Multiple Comparisons<br>[<a href=""../chapters/10/00-sdt.html"">Chapter 11</a>] - read before next monday "," [<a href=""../labs/lab1mri-pt2.html"">Lab: fMRI pt2</a>]"
+"*Thurs, Apr 16* "," Computational modeling, intro to RL, final projects "," [<a href=""../labs/lab-rl-pt1.html"">Lab 3: Reinforcement Learning</a>] "
+"*Tues, Apr 21* "," Computational modeling, intro to RL, final projects "," [<a href=""../labs/lab-rl-pt1.html"">Lab 3: Reinforcement Learning</a>] "
+"*Thurs, Apr 23* "," Computational modeling, intro to RL, final projects "," [<a href=""../labs/lab-rl-pt1.html"">Lab 3: Reinforcement Learning</a>] "
+"*Tues, Apr 28* "," Literature reviews, findings papers online, reference managers and citations<br>[<a href=""../chapters/12/00-rl.html"">Chapter 13</a>] - read before next wednesday  ","[<a href=""../labs/lab-rl-pt1.html"">Lab 3: Reinforcement Learning</a>] "
+"*Thurs, Apr 30* ", Work on final projects in class  , Final projects 
+"*Tues, May 5* ","Literature reviews, findings papers online, reference managers and citations", Final projects 
+"*Thurs, May 7* ",Make up day, Final projects 
+"*Tues, May 11* ",Make up day, Final projects 
+Final exam time TBD ," Final oral presentation, final papers due ", 
+,"Informed consent, institutional review boards, ethics in research",

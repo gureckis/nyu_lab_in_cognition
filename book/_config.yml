@@ -1,0 +1,20 @@
+# Book settings
+title: Lab in C&P (Fall2020)
+author: Todd M. Gureckis
+logo: images/logo/artificialintelligence.svg
+
+html:
+  home_page_in_navbar: false
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+execute:
+  execute_notebooks: off
+
+parse:
+  myst_extended_syntax: true
+
+launch_buttons:
+  jupyterhub_url: "https://psychua-46-fall.rcnyu.org/"  # The URL for your JupyterHub. (e.g., https://datahub.berkeley.edu)

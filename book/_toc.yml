@@ -1,0 +1,69 @@
+- file: intro
+
+- part: Overview
+  chapters:
+  - file: course-content/syllabus
+    title: Syllabus
+  - file: course-content/schedule
+    title: Schedule
+
+
+- part: Resources
+  chapters:
+  - url: https://psychua-46-fall.rcnyu.org/
+    title: JupyterHub
+  - url: https://piazza.com/nyu/fall2020/psychua460019250/home
+    title: Piazza
+  - url: https://github.com/gureckis/nyu_lab_in_cognition
+    title: GitHub
+
+- part: Textbook
+  numbered: true
+  chapters:
+    - file: chapters/00/00-cogsci
+    - file: chapters/19/00-jupyter
+    - file: chapters/03/00-python
+    - file: chapters/01/00-whystats
+    - file: chapters/02/00-researchdesign    
+    - file: chapters/05/00-data
+    - file: chapters/04/00-describingdata
+    - file: chapters/09/00-plots
+    - file: chapters/06/00-probability
+    - file: chapters/06/01-sampling
+    - file: chapters/06/02-estimation
+    - file: chapters/07/00-hypothesistesting
+    - file: chapters/08/00-ttest
+    - file: chapters/10/00-sdt
+    - file: chapters/11/00-correlation
+    - file: chapters/12/00-linearregression
+    - file: chapters/13/00-logisticregression
+    - file: chapters/14/00-mixed-effect
+    - file: chapters/15/00-mentalsimulation
+    - file: chapters/16/00-mri
+    - file: chapters/17/00-rl
+    - file: chapters/18/00-writing
+
+
+
+- part: Labs & Homeworks
+  chapters:
+  - url: https://docs.google.com/forms/d/e/1FAIpQLScqQUx1KTsunkto2N86Vqw3P30AwHYmbUGx6Vb_ZyZ8CHjj_g/viewform
+    title: Pre-class Survey (HW0)
+  - file: labs/PythonIntro
+    title: Intro to Python (HW1)
+  - file: homeworks/hw3/Homework3
+    title: Python Data Analysis (HW3)
+  - file: labs/ExploringData
+    title: Exploring Data
+
+
+- part: Tips & Tricks
+  chapters:
+    - file: tips/pythonresources
+    - file: tips/fortyforloops
+    - file: tips/nyu-jupyterhub
+
+- part: About
+  chapters:
+    - file: LICENSE
+      title: License
