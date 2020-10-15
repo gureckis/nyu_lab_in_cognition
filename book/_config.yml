@@ -16,5 +16,14 @@ execute:
 parse:
   myst_extended_syntax: true
 
+repository:
+  url: https://github.com/gureckis/nyu_lab_in_cognition
+  path_to_book: book/
+  branch: master
+
+
 launch_buttons:
+  notebook_interface: "classic"
   jupyterhub_url: "https://psychua-46-fall.rcnyu.org/"  # The URL for your JupyterHub. (e.g., https://datahub.berkeley.edu)
+  binderhub_url: ""
+  colab_url: "https://colab.research.google.com"
