@@ -15,9 +15,9 @@ book:
 	cp -r scripts _build/html/
 	cp -r chapters/02/images _build/html/chapters/02/
 	cp -r chapters/03/images _build/html/chapters/03/
-	cp -r chapters/04/images _build/html/chapters/04/
+	cp -r chapters/05/images _build/html/chapters/05/
 	cp -r chapters/06/images _build/html/chapters/06/
-# 	cp -r chapters/09/images _build/html/chapters/09/
+	cp -r chapters/07/images _build/html/chapters/07/
 # 	cp -r chapters/19/images _build/html/chapters/19/
 
 clean:
