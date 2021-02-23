@@ -151,9 +151,9 @@
   chapters:
     - file: homeworks/Homework1
       title: Intro to Jupyter (HW1)
-    - file: chapters/03/python-ICA.ipynb
+    - file: chapters/03/python-ica.ipynb
       title: Python ICA (Ch 4)
-    - file: chapters/04/ica.md
+    - file: chapters/04/design-ica.md
       title: Design ICA (Ch 5)
   # - url: https://docs.google.com/forms/d/e/1FAIpQLScqQUx1KTsunkto2N86Vqw3P30AwHYmbUGx6Vb_ZyZ8CHjj_g/viewform
   #   title: Pre-class Survey (HW0)
