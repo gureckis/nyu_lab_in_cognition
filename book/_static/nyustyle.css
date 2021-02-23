@@ -37,3 +37,41 @@ h4 {
     font-family: Inter, sans-serif;
     font-weight: 350;
 }
+
+
+.bg-danger {
+background-color: #dc3545!important;
+}
+.bg-warning {
+background-color: #ffc107!important;
+}
+.bg-info {
+background-color: #0dcaf0!important;
+}
+.bg-dark {
+background-color: #212529!important;
+}
+.bg-primary {
+background-color: #0d6efd!important;
+}
+
+.rounded-pill {
+border-radius: 50rem!important;
+}
+
+.text-dark {
+color: #212529!important;
+}
+
+.badge {
+display: inline-block;
+padding: .35em .65em;
+font-size: .75em;
+font-weight: 700;
+line-height: 1;
+color: #fff;
+text-align: center;
+white-space: nowrap;
+vertical-align: baseline;
+border-radius: .25rem;
+}

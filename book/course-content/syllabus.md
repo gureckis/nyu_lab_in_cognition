@@ -3,7 +3,7 @@
 # LAB IN COGNITION AND PERCEPTION
 
 
-### Course Number/Semester**: PSYCH-UA.46 - Spring 2021
+### PSYCH-UA.46 - Spring 2021
 
 ### Instructors
 
