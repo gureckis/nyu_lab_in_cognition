@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lecture 1 [lhc/t.m. gureckis]</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="../scripts/remark.min.js" type="text/javascript"></script>
+    <script src="../scripts/jquery-1.8.0.min.js" type="text/javascript"></script>
+    <script src="../scripts/d3.v2.js"></script>
+    <script src="../scripts/custom.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        /* put the code here */
+        function scienceOfMind () {
+            remark.emit('pauseRemark');
+            
+            function getState() {
+                mytag = d3.selectAll(".slide")
+                .filter(function(d,i) { return this.style.cssText == "display: table; "; })
+                .select("input[name='state']");
+                
+                if( mytag[0][0] == null) {
+                    setup();
+                    setState(0);
+                    update();
+                    return 0;
+                } else {
+                    return parseInt(mytag.property("value"));  
+                } 
+            }
+            
+            function setState(val) {
+                d3.selectAll(".slide")
+                .filter(function(d,i) { return this.style.cssText == "display: table; "; })
+                .select("input[name='state']").remove();
+
+                d3.selectAll(".slide")
+                .filter(function(d,i) { return this.style.cssText == "display: table; "; })
+                .append("input")
+                .attr("type","hidden")
+                .attr("name","state")
+                .attr("value",val);
+                state = val;
+            }        
+            
+            function keydown() {
+                console.log("i got the keypress not remark!");
+                console.log("----", totalstates, state);
+                switch (d3.event.keyCode) {
+                    case 39: // right arrow
+                        if(d3.event.metaKey) return;
+                    case 40: // down arrow
+                    case 34: // page down
+                    case 32: // spacebar
+                        state += 1;
+                        if (state>=totalstates) {
+                            d3.select(window).on("keydown",null); // remove d3 catches
+                            remark.emit("resumeRemark"); // resume remark
+                            remark.emit("gotoNextSlide"); // go to next slide
+                            return;
+                        }
+                        break;
+                    case 37: // left arrow
+                        if (d3.event.metaKey) return;
+                    case 38: // up arrow
+                    case 33: // page up
+                        d3.select(window).on("keydown",null); // remove d3 catches
+                        remark.emit("resumeRemark"); // resume remark
+                        remark.emit("gotoPrevSlide"); // go to previous slide
+                        return;                              
+                        break;
+                }
+                setState(state);
+                update(400);
+            }
+            
+            function update() {
+                console.log("updating list", state);
+                // select svg again
+                svg = d3.selectAll(".slide")
+                    .filter(function(d,i) { return this.style.cssText == "display: table;"; })
+                    .select("svg");
+                switch (state) {
+                    case 0: // show the circles
+                        dataset = [
+                            "<b>Environment</b>",
+                            "<b>Stimuli</b> that are perceived by the body and nervous system",
+                            "<b>Behavior</b>"
+                        ];
+                        state0(dataset);
+                        break;
+                    case 1: // show the words
+                        dataset = [
+                            "<b>Environment</b>",
+                            "<b>Stimuli</b> that are perceived by the body and nervous system",
+                            "<b>Behavior</b>"
+                        ];
+                        state1(dataset);
+                        break;
+                    case 2: // insert cognition
+                        dataset = [
+                            "<b>Environment</b>",
+                            "<b>Stimuli</b> that are perceived by the body and nervous system",
+                            "<font color='steelblue'><b>Cognitive Mechanisms</b> (i.e., representations + processes)</font>",
+                            "<b>Behavior</b>"
+                        ];
+                        state2(dataset);
+                        break;
+                    case 3: // add theory
+                        dataset = [
+                            "<b>Environment</b>",
+                            "<b>Stimuli</b> that are perceived by the body and nervous system",
+                            "<font color='steelblue'><b>Cognitive Mechanisms</b> (i.e., representations + processes)</font>",
+                            "<b>Behavior</b>"
+                        ];
+                        state3(dataset);
+                        break;
+                    case 4: //link theory
+                        dataset = [
+                            "<b>Environment</b>",
+                            "<b>Stimuli</b> that are perceived by the body and nervous system",
+                            "<font color='steelblue'><b>Cognitive Mechanisms</b> (i.e., representations + processes)</font>",
+                            "<b>Behavior</b>"
+                        ];
+                        state4(dataset);
+                        break;
+                    case 5: //link describes
+                        dataset = [
+                            "<b>Environment</b>",
+                            "<b>Stimuli</b> that are perceived by the body and nervous system",
+                            "<font color='steelblue'><b>Cognitive Mechanisms</b> (i.e., representations + processes)</font>",
+                            "<b>Behavior</b>"
+                        ];
+                        state5(dataset);
+                        break;
+                    case 6: //link describes
+                        dataset = [
+                            "<b>Environment</b>",
+                            "<b>Stimuli</b> that are perceived by the body and nervous system",
+                            "<font color='steelblue'><b>Cognitive Mechanisms</b> (i.e., representations + processes)</font>",
+                            "<b>Behavior</b>"
+                        ];
+                        state6(dataset);
+                        break;
+                    case 7: //link describes
+                        dataset = [
+                            "<b>Environment</b>",
+                            "<b>Stimuli</b> that are perceived by the body and nervous system",
+                            "<font color='steelblue'><b>Cognitive Mechanisms</b> (i.e., representations + processes)</font>",
+                            "<b>Behavior</b>"
+                        ];
+                        state7(dataset);
+                        break;
+                }
+
+            } 
+            
+            function drawLineArrow(canvas, x1, y1, x2, y2) {
+                
+                // update to support alternative orientations of the arrow and shading
+                canvas.insert("line","circle")
+                    .attr("x1", x1)
+                    .attr("y1", y1)
+                    .attr("x2", x2)
+                    .attr("y2", y2)
+                    .attr("stroke-miterlimit",10)
+                    .attr("stroke-width", 2.0)
+                    .attr("stroke","black")
+                    .attr("fill","none");
+                
+                arrowhead = (x2-6.507) + "," + (y2-5.112) + " ";
+                arrowhead += x2 + "," + y2 + " "; 
+                arrowhead += (x2+6.703) + "," + (y2-5.122) + " ";
+                arrowhead += (x2-0.095) + "," + (y2+10.505) + " ";
+                
+                console.log(arrowhead);
+                canvas.append("polygon")
+                    .attr("points",  arrowhead)
+                    .attr("fill", "#8C8888")
+                    .attr("stroke", "black");               
+                
+                /*
+                svg.append("polygon")
+                    .attr("points", "87.368,185.565 92.626,197.812 92.626,189.839")
+                    .attr("fill", "#8C8888");
+
+                svg.append("polygon")
+                    .attr("points", "97.885,185.565 92.624,197.812 92.624,189.839")
+                    .attr("fill", "#53504F");
+                */ 
+            }
+            
+            function drawCurveArrow(canvas, x1, y1, x2, y2) {
+
+                canvas.insert("path","circle")
+                    .attr("d","M"+x2+","+y2+" c0,0-189.064-80.416-23.974-198.906")
+                    .attr("stroke-miterlimit",10)
+                    .attr("stroke-width", 2.0)
+                    .attr("stroke","black")
+                    .attr("fill","none");     
+                
+                arrowhead = (x1-8.831) + "," + (y1+14.472) + " ";
+                arrowhead += (x1-8.476) + "," + (y1+6.205) + " ";
+                arrowhead += (x1-16.00) + "," + (y1+3.744) + " ";
+                arrowhead += (x1) + "," + (y1);
+                
+                canvas.append("polygon")                
+                    .attr("points",arrowhead)
+                    .attr("fill", "#8C8888")
+                    .attr("stroke", "black");           
+            }
+            
+            function state0 (dataset) {
+                console.log("running state zero");
+
+                // add a line
+                drawLineArrow(svg, w/3.0, h/5.0, w/3.0, h/5.0+1*100-26);
+                drawLineArrow(svg, w/3.0, h/5.0+1*100-16, w/3.0, h/5.0+2*100-26);
+                drawCurveArrow(svg, w/3.0-16, h/5.0-4,  w/3.0, h/5.0+2*100);
+
+
+                // add the circles
+                svg.selectAll("circle")
+                    .data(dataset)
+                    .enter()
+                    .append("circle")
+                    .attr("cx", w/3.0)
+                    .attr("cy", function(d, i) {
+                        return h/5.0+i*100;    
+                    })
+                    .attr("r", 60)
+                    .attr("fill", "white")
+                    .attr("stroke", "#333")
+                    .attr("stroke-width", 3)
+                    .attr("stroke-opacity", 1e-6)
+                    .transition()
+                    .duration(750)
+                    .attr("r", 12)
+                    .style("stroke-opacity", 1);
+
+                
+                
+            }
+
+            function state1 (dataset) {
+                console.log("running state one");
+
+                // add initial circles
+                svg.selectAll("foreignObject")
+                    .data(dataset)
+                    .enter()
+                    .append("foreignObject")
+                    .attr("width", 200)
+                    .attr("height", 100)
+                    .attr("x", w/3.0 + 20)
+                    .attr("opacity", 1e-6)
+                    .attr("y", function(d, i) {
+                        return h/5.0+i*100-8;  
+                    })  
+                    .append("xhtml:body")
+                    .style("color", "#333")
+                    .style("background", "transparent")
+                    .style("font","14px 'Helvetica Neue'")
+                    .append("div")
+                    .attr("class","label")
+                    .style("opacity", 1e-6)
+                    .html(function(d) {
+                        return d;
+                    })
+                    .transition()
+                    .duration(750)
+                    .style("opacity", 1.0);
+            }
+            
+            function state2 (dataset) {
+                console.log("running state two");
+
+                // adding lines
+                d3.selectAll("line").remove();
+                d3.selectAll("polygon").remove();
+                
+                // add a line
+                drawLineArrow(svg, w/3.0, h/5.0, w/3.0, h/5.0+1*70-26);
+                drawLineArrow(svg, w/3.0, h/5.0+1*70-26, w/3.0, h/5.0+2*70-26);
+                // add a line
+                drawLineArrow(svg, w/3.0, h/5.0+2*70-26, w/3.0, h/5.0+3*70-26);
+                drawCurveArrow(svg, w/3.0-16, h/5.0-4,  w/3.0, h/5.0+2*100);
+                
+                // update the text
+                d3.selectAll(svg.node().getElementsByTagName("foreignObject"))
+                    .transition()
+                    .duration(100)
+                    .attr("y", function(d, i) {
+                        if (i<2) {
+                            return h/5.0+i*70-8;
+                        } else {
+                            return h/5.0+(i+1)*70-8;
+                        }
+                    });
+
+                // delete
+                svg.selectAll("foreignObject").remove();
+                
+                // update the circles
+                svg.selectAll("circle")
+                    .transition()
+                    .duration(100)
+                    .attr("cy", function(d, i) {
+                        if (i<2) {
+                            return h/5.0+i*70;
+                        } else {
+                            return h/5.0+(i+1)*70;
+                        }
+                    });
+                
+                // add
+                // add the circles
+                svg.selectAll("circle")
+                    .data(dataset, function(d) { return d; })
+                    .enter()
+                    .append("circle")
+                    .attr("cx", w/3.0)
+                    .attr("cy", function(d, i) {
+                        console.log(i, ":", d);
+                        return h/5.0+i*70;   
+                    })
+                    .attr("r", 60)
+                    .attr("fill", function(d, i) {
+                        if(i==2) return "lightblue";
+                        else return "white";
+                            
+                    })
+                    .attr("stroke", function(d,i) {
+                        if(i==2) return "steelblue";
+                        else return "#333";
+                    })
+                    .attr("stroke-width", 3)
+                    .attr("stroke-opacity", 1e-6)
+                    .transition()
+                    .duration(350)
+                    .attr("r", 12)
+                    .style("stroke-opacity", 1);
+
+                // add the text                
+                svg.selectAll("foreignObject")
+                    .data(dataset)
+                    .enter()
+                    .append("foreignObject")
+                    .attr("width", 200)
+                    .attr("height", 100)
+                    .attr("x", w/3.0 + 20)
+                    .attr("opacity", 1e-6)
+                    .attr("y", function(d, i) {
+                        return h/5.0+i*70-8;  
+                    })  
+                    .append("xhtml:body")
+                    .style("color", "#333")
+                    .style("background", "transparent")
+                    .style("font","14px 'Helvetica Neue'")
+                    .append("div")
+                    .attr("class","label")
+                    .style("opacity", 1e-6)
+                    .html(function(d) {
+                        return d;
+                    })
+                    .transition()
+                    .duration(350)
+                    .style("opacity", 1.0);
+
+            }
+            
+            function state3(dataset) {
+                
+                group = svg.append("g")
+                            .attr("id", "state3");
+                
+                // add theory circle
+                group.append("circle")
+                    .attr("cx", 2.0*w/3.0+95)
+                    .attr("cy", h/2.0-10)
+                    .attr("r", 1e-6)
+                    .attr("fill","yellow")
+                    .attr("stroke","orange")
+                    .attr("stroke-width",3)
+                    .style("opacity", 1e-6)
+                    .transition()
+                    .duration(1000)
+                    .ease("elastic")
+                    .style("opacity", 1.0)
+                    .attr("r", 60);
+                    
+
+                // add theory text
+                group.append("foreignObject")
+                    .attr("width", 100)
+                    .attr("height", 100)
+                    .attr("x", 2.0*w/3.0+50)
+                    .attr("y", h/2.0-25)
+                    .append("xhtml:body")
+                    .style("color", "orange")
+                    .style("background", "transparent")
+                    .style("font","22px 'Helvetica Neue'")
+                    .style("opacity", 1e-6)
+                    .html("<b>Theory</b>")
+                    .transition()
+                    .duration(350)
+                    .style("opacity", 1.0);
+                
+            }
+            
+            function state4(dataset) {
+            
+                svg.insert("path","circle")
+                    .attr("fill", "none")
+                    .attr("stroke","orange")
+                    .attr("stroke-width","2")
+                    .attr("stroke-miterlimit",10)
+                    .attr("d","M578.333,237.5c0,0-89.569,241.908-316.872,75.812");
+                    
+                svg.insert("polygon")
+                    .attr("points","270.079,311.57 262.1,313.761 262.221,322.188 253.6,307.588")
+                    .attr("fill", "yellow")
+                    .attr("stroke", "orange");
+                                  
+                // add text saying "predicts"
+                svg.append("foreignObject")
+                    .attr("width", 180)
+                    .attr("height", 50)
+                    .attr("x", w/2.0)
+                    .attr("y", 5.6*h/6.0)
+                    .append("xhtml:body")
+                    .attr("id", "predict-generate")
+                    .style("color", "orange")
+                    .style("background", "transparent")
+                    .style("font","22px 'Helvetica Neue'")
+                    .style("opacity", 1e-6)
+                    .html("<i>Predicts</i>")
+                    .transition()
+                    .duration(350)
+                    .style("opacity", 1.0);
+                
+            }
+            
+            function state5(dataset) {
+                
+                // add path with shape
+                svg.insert("path", "path")
+                    .attr("fill", "#d6d6d6")
+                    .attr("stroke", "#aaa")
+                    .attr("stroke-width","5px")
+                    .attr("stroke-mitrelimit",10)
+                    .attr("d", "M477,261.273c0,7.309-5.258,13.231-11.743,13.231 H229.41c-6.485,0-11.743-5.923-11.743-13.231V137.231c0-7.307,5.258-13.231,11.743-13.231h235.847 c6.485,0,11.743,5.924,11.743,13.231V261.273z");
+                
+                // add path with arrow
+                svg.insert("path", "path")
+                    .attr("fill", "none")
+                    .attr("stroke", "orange")
+                    .attr("stroke-width", "2")
+                    .attr("stroke-miterlimit", 10)
+                    .attr("d", "M578.333,129.196   c0,0-38.732-125.995-148.507-17.993");
+                
+                // draw arrow
+                svg.insert("polygon", "circle")
+                    .attr("points", "429.472,102.505 430.449,110.722 438.801,111.857 423.079,118.208")
+                    .attr("fill", "yellow")
+                    .attr("stroke", "orange");
+                
+                // add text saying "describes"
+                svg.append("foreignObject")
+                    .attr("width", 160)
+                    .attr("height", 50)
+                    .attr("x", (5*w/6.0)-20)
+                    .attr("y", 1*h/6.0)
+                    .append("xhtml:body")
+                    .attr("id", "describes-implements")
+                    .style("color", "orange")
+                    .style("background", "transparent")
+                    .style("font","22px 'Helvetica Neue'")
+                    .style("opacity", 1e-6)
+                    .html("<i>Describes</i>")
+                    .transition()
+                    .duration(350)
+                    .style("opacity", 1.0);
+
+            }
+            
+            function state6(dataset) {
+                // replace theory with model
+                svg.select("#state3").remove();
+                
+                svg.select("#describes-implements")
+                    .html("<i>Implements</i>");
+
+                svg.select("#predict-generate")
+                    .html("<i>Generates</i>");
+                
+                svg.insert("path","circle")
+                    .attr("id","gears")
+                    .attr("inkscape:connector-curvature",0)
+                    .attr("fill","#ADD8E6")
+                    .attr("stroke","#4682B4")
+                    .attr("stroke-width",3)
+                    .attr("d","M541.094,105.307 \
+	c0,0,0.869-0.205,2.171-1.308 M566.521,92.933c-1.407,0.306-2.786,0.663-4.159,1.099c-1.207,3.367-1.452,6.087-1.387,7.875 \
+	c0.067,1.787,0.419,2.642,0.419,2.642l1.936,4.369c-2.502,1.113-4.845,2.555-6.985,4.264l-2.981-3.741c0,0-0.589-0.714-2.146-1.596 \
+	s-4.095-1.903-7.64-2.38c-1.019,1.019-1.982,2.082-2.903,3.191c0.805,3.485,2.065,5.91,3.087,7.377s1.805,1.962,1.805,1.962 \
+	l3.977,2.643c-1.502,2.289-2.707,4.756-3.584,7.351l-4.525-1.517c0,0-0.883-0.283-2.669-0.184c-1.785,0.1-4.477,0.604-7.717,2.119 \
+	c-0.306,1.408-0.532,2.809-0.707,4.238c2.561,2.497,4.914,3.87,6.566,4.552c1.653,0.682,2.59,0.707,2.59,0.707l4.762,0.026 \
+	c-0.028,2.739,0.303,5.48,0.968,8.136l-4.631,1.177c0,0-3.876,1.169-7.69,7.221c0.503,1.35,1.074,2.679,1.7,3.976 \
+	c3.504,0.716,6.246,0.582,8.005,0.262c1.76-0.32,2.538-0.811,2.538-0.811l4.055-2.538c1.457,2.319,3.21,4.457,5.206,6.331 \
+	l-3.271,3.479c0,0-0.631,0.663-1.281,2.328c-0.651,1.666-1.313,4.324-1.282,7.901c1.153,0.863,2.356,1.68,3.584,2.433 \
+	c3.336-1.292,5.548-2.887,6.854-4.107c1.308-1.221,1.7-2.067,1.7-2.067l2.041-4.316c2.48,1.163,5.103,2.014,7.796,2.511 \
+	l-0.863,4.683c0,0-0.17,0.916,0.183,2.668c0.354,1.753,1.231,4.36,3.191,7.352c1.438,0.103,2.876,0.136,4.317,0.104 \
+	c2.107-2.89,3.117-5.435,3.558-7.168c0.439-1.733,0.34-2.668,0.34-2.668l-0.628-4.709c2.715-0.363,5.366-1.082,7.9-2.119 \
+	l1.806,4.421c0,0,1.61,3.375,7.534,6.226c-0.664,0.119-1.329,0.223-1.988,0.366c-1.45,3.392-1.926,6.163-2.015,8.005 \
+	c-0.088,1.843,0.21,2.773,0.21,2.773l1.308,4.134c-2.641,0.841-5.182,1.944-7.587,3.322l-2.171-3.767c0,0-2.196-3.466-9.156-5.913 \
+	c-1.233,0.869-2.429,1.777-3.584,2.747c0.292,3.677,1.157,6.359,1.936,8.031c0.778,1.673,1.465,2.354,1.465,2.354l3.087,3.035 \
+	c-1.947,1.973-3.69,4.149-5.18,6.488l-3.662-2.329c0,0-0.812-0.503-2.616-0.89c-1.804-0.386-4.59-0.637-8.241-0.104 \
+	c-0.688,1.343-1.337,2.711-1.909,4.107c3.936,6.243,7.848,7.613,7.848,7.613l4.134,1.255c-0.808,2.652-1.338,5.401-1.569,8.163 \
+	l-4.316-0.367c0,0-4.131-0.178-10.099,4.16c0.015,1.509,0.094,3.023,0.235,4.525c3.193,1.85,5.899,2.647,7.718,2.956 \
+	c1.818,0.312,2.747,0.131,2.747,0.131l4.264-0.811c0.517,2.724,1.329,5.399,2.407,7.953l-4.003,1.674c0,0-3.716,1.782-6.984,8.397 \
+	c0.714,1.33,1.478,2.608,2.302,3.872c3.686,0.154,6.46-0.371,8.215-0.941c1.754-0.571,2.485-1.178,2.485-1.178l3.4-2.694 \
+	c1.724,2.172,3.692,4.18,5.834,5.938l-2.773,3.349c0,0-0.602,0.742-1.203,2.485c-0.6,1.745-1.188,4.476-1.099,8.162 \
+	c1.251,0.846,2.556,1.645,3.872,2.381c6.671-3.152,8.476-6.854,8.476-6.854l1.753-3.95c2.536,1.122,5.187,1.974,7.9,2.538 \
+	l-0.863,4.237c0,0-0.199,0.924,0.079,2.747c0.277,1.823,1.031,4.547,2.825,7.771c1.499,0.168,3.019,0.274,4.525,0.313 \
+	c4.441-5.892,4.343-10.02,4.343-10.02l-0.287-4.316c2.767-0.185,5.497-0.677,8.162-1.439l1.203,4.187c0,0,1.283,3.91,7.456,7.952 \
+	c1.406-0.548,2.806-1.165,4.159-1.831c0.597-3.64,0.381-6.457,0.026-8.267c-0.354-1.811-0.837-2.616-0.837-2.616l-2.276-3.688 \
+	c2.363-1.449,4.561-3.161,6.566-5.075l3.009,3.139c0,0,0.67,0.686,2.328,1.491c1.66,0.808,4.307,1.738,7.979,2.093 \
+	c0.989-1.138,1.936-2.339,2.825-3.558c-2.327-7.001-5.781-9.234-5.781-9.234l-3.715-2.224c1.419-2.381,2.566-4.934,3.453-7.561 \
+	l4.133,1.412c0,0,0.902,0.293,2.747,0.235c1.845-0.055,4.616-0.49,8.031-1.883c0.347-1.469,0.642-2.955,0.863-4.447 \
+	c-5.313-5.118-9.418-5.494-9.418-5.494l-4.343-0.235c0.15-2.769,0.017-5.555-0.418-8.293l4.264-0.681c0,0,4.061-0.82,8.816-6.462 \
+	c-0.374-1.461-0.811-2.916-1.308-4.342c-3.542-1.032-6.375-1.154-8.215-1.021c-1.839,0.135-2.694,0.523-2.694,0.523l-3.95,1.806 \
+	c-1.153-2.52-2.58-4.92-4.238-7.142l3.479-2.59c0,0,3.198-2.605,4.787-9.811c-1.01-1.12-2.063-2.188-3.165-3.218 \
+	c-7.232,1.466-9.889,4.604-9.889,4.604l-2.643,3.427c-2.192-1.696-4.59-3.146-7.09-4.343l1.884-3.924c0,0,0.41-0.857,0.575-2.695 \
+	c0.167-1.837,0.082-4.655-0.89-8.214c-1.416-0.521-2.861-0.986-4.316-1.387c-5.721,4.659-6.592,8.686-6.592,8.686l-0.759,4.291 \
+	c-2.729-0.482-5.523-0.678-8.293-0.576l-0.157-4.343c0,0-0.311-4.095-5.337-9.496c-0.218,0.028-0.437,0.073-0.654,0.104 \
+	c0.878-0.511,1.748-1.055,2.59-1.622c0.211-3.57-0.321-6.23-0.89-7.927c-0.566-1.696-1.15-2.407-1.15-2.407l-3.087-3.636 \
+	c2.088-1.772,3.948-3.826,5.52-6.069l3.898,2.747c0,0,0.77,0.509,2.511,0.916c1.742,0.407,4.444,0.698,7.979,0.157 \
+	c0.691-1.265,1.341-2.574,1.91-3.898c-3.508-6.234-7.325-7.587-7.325-7.587l-4.553-1.413c0.799-2.619,1.251-5.321,1.361-8.058 \
+	l4.761,0.183c0,0,0.932,0.024,2.616-0.575c1.686-0.6,4.12-1.846,6.802-4.212c-0.103-1.438-0.262-2.869-0.497-4.291 \
+	c-3.16-1.674-5.834-2.296-7.613-2.485c-1.777-0.189-2.668,0.052-2.668,0.052l-4.604,1.308c-0.745-2.635-1.804-5.173-3.191-7.534 \
+	l4.107-2.433c0,0,0.79-0.468,1.884-1.884c1.094-1.415,2.477-3.78,3.453-7.22c-0.863-1.153-1.781-2.254-2.747-3.322 \
+	c-3.564,0.3-6.145,1.185-7.744,1.988c-1.597,0.803-2.224,1.491-2.224,1.491l-3.165,3.584c-2.052-1.814-4.331-3.368-6.775-4.604 \
+	l2.145-4.264c0,0,0.421-0.809,0.576-2.59c0.155-1.782,0.044-4.531-0.994-7.953c-1.35-0.503-2.716-0.932-4.107-1.308 \
+	c-5.672,4.359-6.488,8.319-6.488,8.319l-0.732,4.709c-2.706-0.417-5.464-0.491-8.188-0.209l-0.497-4.735 \
+	c0,0-0.109-0.929-0.941-2.512C570.817,97.472,569.246,95.251,566.521,92.933z M542.035,163.489c-0.606,0.017-1.2,0.053-1.805,0.104 \
+	c-2.109,2.682-3.037,5.156-3.375,6.828c-0.339,1.672-0.104,2.538-0.104,2.538l1.491,5.441c-2.404,0.658-4.665,1.822-6.593,3.401 \
+	l-3.584-4.369c0,0-0.586-0.668-2.146-1.36c-1.559-0.692-4.101-1.371-7.508-1.204c-0.783,0.926-1.498,1.895-2.172,2.904 \
+	c0.781,3.322,2.122,5.573,3.218,6.88c1.098,1.307,1.91,1.674,1.91,1.674l5.18,2.224c-0.984,2.289-1.472,4.781-1.438,7.273 \
+	l-5.651,0.078c0,0-0.893,0.024-2.406,0.811c-1.513,0.788-3.632,2.359-5.625,5.127c0.235,1.19,0.548,2.376,0.916,3.532 \
+	c3.083,1.459,5.698,1.795,7.403,1.752c1.705-0.041,2.512-0.444,2.512-0.444l4.944-2.669c1.175,2.197,2.818,4.148,4.787,5.678 \
+	l-3.453,4.447c0,0-0.535,0.732-0.863,2.406c-0.327,1.674-0.425,4.302,0.497,7.587c1.077,0.558,2.189,1.06,3.322,1.491 \
+	c3.064-1.499,4.961-3.322,5.991-4.683c1.03-1.359,1.203-2.25,1.203-2.25l1.021-5.546c2.451,0.451,5.008,0.403,7.43-0.184 \
+	l1.334,5.468c0,0,0.204,0.871,1.308,2.171c1.105,1.301,3.11,3.016,6.253,4.343c1.108-0.493,2.199-1.058,3.244-1.674 \
+	c0.737-3.331,0.498-5.96,0.078-7.612c-0.42-1.654-0.994-2.329-0.994-2.329l-3.715-4.265c1.881-1.635,3.422-3.652,4.474-5.912 \
+	l5.102,2.355c0,0,0.832,0.394,2.537,0.34c1.706-0.053,4.276-0.568,7.273-2.197c0.304-1.175,0.538-2.357,0.706-3.559 \
+	c-2.144-2.653-4.331-4.111-5.887-4.813c-1.555-0.703-2.459-0.68-2.459-0.68l-5.624,0.235c-0.106-2.49-0.747-4.937-1.857-7.168 \
+	l5.049-2.512c0,0,0.81-0.413,1.831-1.779c1.022-1.366,2.23-3.704,2.825-7.063c-0.729-0.97-1.521-1.892-2.354-2.773 \
+	c-3.412,0.022-5.91,0.844-7.43,1.622c-1.517,0.778-2.04,1.491-2.04,1.491l-3.322,4.552c-2.013-1.469-4.34-2.512-6.776-3.035 \
+	l1.178-5.52c0,0,0.17-0.887-0.262-2.538c-0.43-1.65-1.484-4.059-3.741-6.619C543.26,163.472,542.642,163.472,542.035,163.489 \
+	L542.035,163.489z M607.333,205.869c14.05,0,25.454,11.404,25.454,25.455c0,14.05-11.404,25.429-25.454,25.429 \
+	s-25.429-11.379-25.429-25.429C581.904,217.273,593.283,205.869,607.333,205.869z");
+
+                // add text saying "Model"
+                svg.append("foreignObject")
+                    .attr("width", 180)
+                    .attr("height", 50)
+                    .attr("x", w-100)
+                    .attr("y", 3.0*h/6.0+100)
+                    .append("xhtml:body")
+                    .style("color", "steelblue")
+                    .style("background", "transparent")
+                    .style("font","22px 'Helvetica Neue'")
+                    .style("opacity", 1e-6)
+                    .html("<b>Model</b>")
+                    .transition()
+                    .duration(350)
+                    .style("opacity", 1.0);
+	
+            }
+            
+            function state7(dataset) {
+                // show experiment influence
+                
+                // draw line
+                svg.insert("path", "path")
+                    .attr("fill", "none")
+                    .attr("stroke", "#7EC943")
+                    .attr("stroke-width", "2")
+                    .attr("stroke-miterlimit", 10)
+                    .attr("d", "M61,322.188c0,0-0.643-109.797,148.661-214.667");
+                
+                // draw arrow
+                svg.insert("polygon", "circle")
+                    .attr("points", "208.594,116.271 209.05,108.009 201.02,105.448 217.603,101.908")
+                    .attr("fill", "#7EC943")
+                    .attr("stroke", "#7EC943");
+
+                // draw line
+                svg.insert("path", "path")
+                    .attr("fill", "none")
+                    .attr("stroke", "#7EC943")
+                    .attr("stroke-width", "2")
+                    .attr("stroke-miterlimit", 10)
+                    .attr("d", "M150.058,353.5c0,0,279.101-26.428,383.489-82.007");
+                
+                // draw arrow
+                svg.insert("polygon", "circle")
+                    .attr("points", "531.471,279.924 532.797,271.757 525.082,268.362 541.945,266.593")
+                    .attr("fill", "#7EC943")
+                    .attr("stroke", "#7EC943");
+
+                // draw line
+                svg.insert("line", "circle")
+                    .attr("stroke", "#7EC943")
+                    .attr("stroke-width", "2")
+                    .attr("stroke-miterlimit", 10)
+                    .attr("x1",146)
+                    .attr("y1",338.5)
+                    .attr("x2",216.723)
+                    .attr("y2",308.344);
+                    
+                // draw arrow
+                svg.insert("polygon", "circle")
+                    .attr("points", "213.848,316.625 215.997,308.635 208.667,304.475 225.623,304.427")
+                    .attr("fill", "#7EC943")
+                    .attr("stroke", "#7EC943");
+
+                // add text saying "Experiment"
+                svg.append("foreignObject")
+                    .attr("width", 180)
+                    .attr("height", 50)
+                    .attr("x", 0)
+                    .attr("y", 5.0*h/6.0)
+                    .append("xhtml:body")
+                    .style("color", "#7EC943")
+                    .style("background", "transparent")
+                    .style("font","22px 'Helvetica Neue'")
+                    .style("opacity", 1e-6)
+                    .html("<b>Experiment</b>")
+                    .transition()
+                    .duration(350)
+                    .style("opacity", 1.0);
+
+                // add text for "manipulates"
+                svg.append("foreignObject")
+                    .attr("width", 180)
+                    .attr("height", 50)
+                    .attr("x", 25)
+                    .attr("y", 3.0*h/6.0-20)
+                    .append("xhtml:body")
+                    .style("color", "#7EC943")
+                    .style("background", "transparent")
+                    .style("font","12px 'Helvetica Neue'")
+                    .style("opacity", 1e-6)
+                    .html("<b>Manipulates</b>")
+                    .transition()
+                    .duration(350)
+                    .style("opacity", 1.0);
+
+                // add text for "observes"
+                svg.append("foreignObject")
+                    .attr("width", 180)
+                    .attr("height", 50)
+                    .attr("x", 120)
+                    .attr("y", 4.8*h/6.0-20)
+                    .append("xhtml:body")
+                    .style("color", "#7EC943")
+                    .style("background", "transparent")
+                    .style("font","12px 'Helvetica Neue'")
+                    .style("opacity", 1e-6)
+                    .html("<b>Observes</b>")
+                    .transition()
+                    .duration(350)
+                    .style("opacity", 1.0);
+
+                // add text for "refines"
+                svg.append("foreignObject")
+                    .attr("width", 180)
+                    .attr("height", 50)
+                    .attr("x", 200)
+                    .attr("y", 5.6*h/6.0-20)
+                    .append("xhtml:body")
+                    .style("color", "#7EC943")
+                    .style("background", "transparent")
+                    .style("font","12px 'Helvetica Neue'")
+                    .style("opacity", 1e-6)
+                    .html("<b>Refines</b>")
+                    .transition()
+                    .duration(350)
+                    .style("opacity", 1.0);
+
+            }
+            
+            function setup() {
+                svg = d3.select("#scienceofmind")
+                    .append("svg")
+                    .style("border", "0px solid black")
+                    .attr("width", w)
+                    .attr("height", h);
+
+            }
+            
+            /* initial setup */
+            w = 725;
+            h = 400;
+            
+                    
+            // write this into slide in a hidden field
+            svg = undefined;
+            state = getState();
+            totalstates = 8;
+            d3.select(window).on("keydown", keydown);
+            
+        }
+        
+        
+        var remark = this.remark;
+        $(document).ready(function () {
+        
+            remark.addListener("ready", function() {
+                addLectureNumber(1);
+            });
+            remark.addListener("afterSlideIn", function(slide, slideIndex) {
+                if (slide.title == "incBullet") {
+                    incrementalBulletSlide();
+                }
+                
+                if (checkSlideForElement(slide, "scienceofmind")) {
+                    /* do animation */
+                    scienceOfMind();
+                
+                }
+            });
+        });
+    
+    </script>
+    <style type="text/css" media="screen">
+    @import "style.css";
+     </style>
+
+  </head>
+  <body>
+    <textarea id="source">
+
+
+name: title
+class:  middle, center, dark
+
+<center>
+<embed src="images/title.svg" type="image/svg+xml" height="100px" align="center" style="border: 0px solid lightgray;"/>
+</center>
+---
+
+name: incBullet
+class: light
+
+# Agenda
+ 
+1. Why study human cognition and what is it?  
+1. Assign readings
+1. Introduction to JupyterHub
+
+
+---
+class: light, middle, center
+
+<img src="images/circle.svg">
+###What is this course about?
+
+---
+class: light, middle
+
+##Short version
+.quote[
+Experimental approaches to understand the structure of human thought.
+]
+
+---
+class: light, middle
+
+##Longer version
+.quote[
+An introductory course on the use of various behavioral measures (accuracy, reaction time, etc...) to understand the structure of the human mind.  Our goal is to use experiments to test alternative theories of cognitive function and to better understand the motivation and structure of human behavior.  We will learn a basic set of skills for interacting with computers to run experiments, collect data, analyze it, and communicate the outcome to others.
+]
+
+---
+class: light, middle, center
+
+<img src="images/brainbw.png" width="150px">
+###What is .blue[human cognition]?
+
+.quote[
+The study of how the mind (or mind/brain) works.  The study of how people think and solve problems.
+]
+
+---
+name: incBullet
+class: light
+
+#Examples
+
+- How do people learn effective behavior through interaction with their environment?
+- What are the stages of information processing the mind goes through to solve problems?
+- How does the architecture of the mind interact with experience to determine what we know?
+- How does human memory work?  In what ways is human memory like computer memory?  In what ways is it not?
+- What is the format or "representation" of information that the mind uses?
+- Can we develop theories that allow us to predict and explain human behavior?  Can information we derive from these investigations enable us to build better artificial intelligence systems to solve problems?
+
+---
+class: light
+
+#Scientific Inference
+
+A tale of two magnets  
+<br>
+<center>
+<img src="images/magpoles_20143_md.gif">
+</center>
+
+---
+class: light, middle
+
+#Scientific Inference
+
+.col1[
+<img src="images/observations.svg" height="500px" width="340px">
+]
+
+.col2[
+<img src="images/theory.svg" height="500px" width="320px">
+]
+
+---
+class: light, middle
+
+#Scientific Inference
+
+.col1[
+<img src="images/observations.svg" height="500px" width="340px">
+]
+
+.col2[
+
+- Natural Behavior
+- Just ask people questions
+- Test/quizzes (more controlled performance measures)
+- Reaction Time (RT)
+- Eye tracking
+- Physiological measures (EKG, Galvanic skin response, heart rate)
+- Brain measures (fMRI, EEG, MEG)
+- Lesion studies/surgical interventions
+]
+
+---
+class: light, middle
+
+#Scientific Inference
+
+.col1[
+
+- Theories of information processing inspired by modern computers
+- Mind-as-a-computational device
+- Build computational theories of the way we think the mind works, test the implication of those theories in new experiments, refine theories when needed.
+]
+
+.col2[
+<img src="images/theory.svg" height="500px" width="320px">
+]
+
+---
+class: light
+
+###the science of the mind
+
+<div id="scienceofmind">
+
+</div>
+
+---
+class: robot
+
+---
+class: light, middle, center
+
+<img src="images/brainside.png" width="180px">
+###What is .blue[cognitive science]?
+
+---
+class: light, middle
+
+.col1[
+
+# Cognitive
+
+.quote[
+"Cognition, as defined by Ulrich Neisser, involves all processes by which sensory input are transformed, reduced, elaborated, stored, recovered, and used."
+]
+
+]
+
+.col2[
+
+# Science
+
+.quote[
+"Science is the art of acquiring knowledge in such a manner that coherent structures of understanding can be erected on the basis of a critical evaluation of evidence."
+]
+
+]
+
+---
+class: light, middle
+
+
+# what makes a mind?
+
+.quote[
+Debated for thousands of years.  If you don't have an immediate answer, don't feel bad.  Various proposals have been thrown around from by Plato, Buddha, Aristotle, Zoroaster, ancient Greek, Indian, and Islamic philosophers, and even a few folks at NYU.
+]
+
+---
+class: light, middle
+
+
+# what do our minds do?
+
+.quote[
+Minds encompass our thoughts, which are the mental processes which allow us to deal with the world.  These include not only explicit wishes, desires or intentions but unconscious processes as well.
+]
+
+
+---
+class: light, middle
+
+
+# Is your mind the same as your brain?
+
+.quote[
+We know that we can't have a mind or thoughts without a brain, but does that mean that minds and brain are synonymous?
+]
+
+---
+class: light, middle
+
+
+# The mind as an organization of processes
+
+.quote[
+A common philosophical approach is the "slippery slope" argument to try to convince us that minds are not literally brains, but encompass anything that is organized as a set of represented mind states that accurately reflect aspect of the world.
+]
+
+---
+class: light, middle
+
+
+# The mind as an organization of processes
+
+<img src="images/slipperyslope.png" width="700">
+
+
+---
+name: incBullet
+class: light
+
+# The mind as an organization of processes
+- What is common to all sober observers viewing the same scene and who are in agreement about what is viewed?
+- Can't literally be neurons.  My neurons are my own, and you can't borrow them to solve your own problems.
+- Well maybe is the the literal organization of the human nervous system (up to the limit of correspondence).  However, we know (or at least believe) that cats have a very similar visual system and view the world much like we do.  Is it the mammalian visual system?  What about other animals?
+- What about artificial systems formed of computers and video cameras that can accurately recognize the scene as well?
+- The key to minds may be not the physical substrate in which they are embodied but the relations that various states of the system have to one another and to the environment/world.
+
+---
+name: incBullet
+class: light
+
+# The mind as an organization of processes
+- Minds aren't human neurons or cat neurons or robot parts, but the organization of dynamic, continually evolving systems that relate ongoing internal (i.e., mind) states and external (i.e., world) states
+- Correspondences can be made between the evolution of two systems to describe what they are doing independent of the exact things they operate on. 
+- Such correspondences are particularly well described in the language of computation, simply because the **THEORY OF COMPUTATION** offers use formal insight into how ostensibly dissimilar systems can be formally identical.
+- Everything that can be expressed in on system can be expressed in a different, but functionally identical system.
+
+---
+name: incBullet
+class: light
+
+# Goals for this semester
+- To explore (experimentally) how the brain **represents** and **processes** information in solving tasks
+- We have to formulate **hypotheses** about how the mind might function, then design experiments to test these hypotheses
+- This will involve testing various **theories** of cognitive function that can be formalized as computer programs or algorithms
+- We are licensed to do this due to the fundamental idea that the mind can be understood as an **organization system** that evolves according to particular rules, steps, or procedures
+
+---
+class: light
+
+# For next time
+- Go to class [website](http://gureckislab.org/courses/fall19/labincp)
+- Read Chapter 1 from our online text book "What is Cognitive Science"
+- Expect an in-class quiz next time!
+
+    </textarea>
+    <div id="slideshow"></div>
+
+  </body>
+
+</html>

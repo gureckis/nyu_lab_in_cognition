@@ -1,0 +1,415 @@
+/* Slideshow styles */
+body { 
+    font-family: "Helvetica Neue", Helvetica;
+    font-size: 19px;
+    font-weight: 300;
+    letter-spacing: .08em;
+    font-weight: normal;
+    color: black;
+    opacity: 0.98;
+}
+a:link,
+a:visited,
+a:hover,
+a:active { 
+    color: #90a8be; 
+    text-decoration: none; 
+    border-bottom: 1px dotted #90a8be; 
+}
+h1 {
+    font-family: "Helvetica Neue", Helvetica;
+    color: #E4BEDA;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: .07em;
+    line-height: 1.1em;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+.remark-slide-content h1 {
+    font-family: "Helvetica Neue", Helvetica;
+    color: #E4BEDA;
+    font-weight: 400;
+    font-size: 30px;
+    letter-spacing: .07em;
+    line-height: 1.1em;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    margin: 0px;
+}
+
+
+h3 {
+    font-family: "Helvetica Neue", Helvetica;
+    color: #333;
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: .07em;
+    line-height: 1.1em;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-transform: uppercase;
+}
+.task {
+    /* float: right; */
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 12px;
+    color: #333;
+    font-family: "Helvetica Neue";
+    letter-spacing: .2em;
+    padding-top: 0.6em;
+    z-index: 3;
+    text-transform: uppercase;
+}
+.infobox {
+    border: 10px solid white;
+    background: #E4DBE3;
+    color: #444;
+    padding: 15px;
+}
+.quote {
+    font-size: 23px;
+}
+.infobox a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #411233; 
+    text-decoration: none; 
+    border-bottom: 1px dotted #411233; 
+}
+/* #slideshow event */	  
+#slideshow .slide .light {
+    border: 16px solid #fff;
+    padding-top: 50px;
+    background: #f3f3f3;
+    width: 100%;
+}
+#slideshow .slide .dark {
+    border: 16px solid #f3f3f3;
+    padding-top: 50px;
+    background: #9a9da1;
+    width: 100%;
+}
+
+
+.remark-slide-container .remark-slide .light {
+    border: 16px solid #fff;
+    padding-top: 50px;
+    background: #f3f3f3;
+    width: 100%;
+}
+.remark-slide-container .remark-slide .dark {
+    border: 16px solid #f3f3f3;
+    padding-top: 50px;
+    background: #9a9da1;
+    width: 100%;
+}
+
+
+#slideshow .slide .robot {
+    background: url('images/robot.jpg');
+    background-position-x: -90px;
+}
+#slideshow .slide .storkexample {
+    background: url('images/stork_example.jpeg') no-repeat;
+    background-size: 880px auto;
+    background-position-y: -10px;
+    
+}
+#slideshow .slide .tuftedata {
+    background: url('images/tuftedata.png');
+    background-size: 900px auto;
+    
+}
+#slideshow .position {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 12px;
+    color: #333;
+    letter-spacing: .2em;
+    padding-top: 0.6em;
+    z-index: 3;
+    text-transform: uppercase;
+}
+
+.remark-slide-container .remark-slide-number {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    font-size: 12px;
+    color: #333;
+    letter-spacing: .2em;
+    padding-top: 0.6em;
+    z-index: 3;
+    text-transform: uppercase;
+}
+
+
+p {
+    -webkit-margin-after: 0.01em;
+    -webkit-margin-before: 0.25em;
+}
+
+li {
+    -webkit-margin-after: 0.6em;
+    -webkit-margin-before: 1em;	      
+}
+li.past {
+    color: #c2c2c2;
+}
+li.present {
+    color: black;
+}
+li.future {
+    color: #fff;
+    opacity: 0.0;
+}
+.citation {
+    color: #d5d5d5;
+    font-size: 20px;
+}
+
+li.past citation {
+    color: #c2c2c2;
+}
+
+li.future.citation {
+    color: #fff;
+}
+
+
+
+.author {
+    font-family: "Bitter", Helvetica;
+    font-size: 20px;
+    color: #E7990F;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 3px #E0CD83;
+}
+.script {
+    font-family: "Quigley";
+    color: #333;
+}
+.note {
+    font-size: 12px;
+    color: rgba(189,189,189,1);
+    font-family: "Helvetica Neue";
+    letter-spacing: .2em;
+}
+
+
+
+iframe {
+    position: relative;
+    width: 750px;
+    height: 450px;
+    margin: 0 auto;
+}
+
+
+.center {
+    margin: 0 auto;
+}
+.footnote {
+    position: absolute;
+    bottom: 3em;
+}
+.red    { color: #FF4943; }
+.gray   { color: #787878; }
+.green  { color: #92d12d; }
+.blue   { color: #41C8F0; }
+.yellow { color: #dbcb14; }
+.orange { color: #eaab0c; }
+.black { color: black; }
+
+
+.people {
+    border-top: 1px solid #f1f1f1;
+}
+
+
+.lablogo {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    width: 300px;
+    text-align: left;
+    vertical-align: bottom
+    z-index: -1;
+    opacity: 0.7;
+}
+.task a {
+    color: #080;
+    text-decoration: none;
+}      
+
+.footnote {
+    position: absolute;
+    bottom: 3em;
+}
+
+.shortlist {
+    font-size: 27px;
+}
+.smallquote {
+    font-size: 14px;
+}
+pre code {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+#slideshow .slide .content code { font-size: 11px;
+  
+}
+
+.large {
+    font-size: 34px;
+}
+
+.large input {
+    font-size: 34px;
+}
+
+.col1 {
+    float: left;
+    height: "100%";
+    width: 300px;
+}
+.col2 {
+    float: left;
+    height: "100%";
+    width: 340px;
+    margin-left: 25px;
+}
+svg {
+    font-size: 12px;
+}
+
+rect.background {
+    fill: none;
+    pointer-events: all;
+}
+
+.axis {
+    shape-rendering: crispEdges;
+    font-size: 10px;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    stroke-width: .5px;
+}
+
+.chart div {
+    font: 10px sans-serif;
+    background-color: steelblue;
+    text-align: right;
+    padding: 3px;
+    margin: 1px;
+    color: white;
+}
+
+.chart rect {
+    stroke: white;
+    fill: steelblue;
+}
+
+.chart text.bar {
+    fill: white;
+}
+
+#barchartdemo {
+    width: 725px;
+    height: 500px;
+    border: 0px solid lightgray;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.titleframe {
+    border: 0px solid lightgray;
+    margin: 2px;
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+
+/* cover flow stuff */
+img.coverflow {
+    position: absolute;
+}
+
+/* some overrides */
+#slideshow .slide .fullframe {
+    padding: 1em;
+}
+
+.labmember {
+    float: left;
+    margin-right: 0px;
+    background: url('thumb_bg.gif') no-repeat 0 0;
+    background-size: 208px 200px;
+    height: 200px;
+    padding: 10px;
+    width: 195px;
+    font-size: 16px;
+}
+
+
+/* graph stuff */
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.plotlabel {
+    font-size: 22px;
+}
+
+.label {
+    background: transparent;
+}
+
+.carddeck{
+    text-align: center;
+    width: 600px;
+    padding-left: 60px;
+    padding-left: 60px;
+    clear: both;
+}
+.card {
+    border: 1px solid #ccc;
+    width: 100px;
+    height: 100px;
+    background: #fff;
+    float: left;
+    margin: 20px;
+    border-radius: 15px;
+    vertical-align: center;
+    text-align: center;
+    padding-top: 30px;
+    font-weight: 800;
+    font-size: 28px;
+}
+td {
+    text-align: left;
+    background: lightgray;
+    padding: 3px;
+}

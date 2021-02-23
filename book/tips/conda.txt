@@ -1,0 +1,9 @@
+conda create --name cognition python=3.7
+conda activate cognition
+conda install -c conda-forge pandas seaborn statsmodels colorlover jupyter_contrib_nbextensions matplotlib pingouin wikipedia ipywidgets nibabel scipy pytorch ipycanvas pip
+conda install -c anaconda scikit-learn scikit-image
+conda install -c pog87 ptitprince
+
+conda install -c ejolly pymer4
+conda install pymc pystan
+pip install petpy

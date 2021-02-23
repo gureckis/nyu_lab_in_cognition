@@ -19,9 +19,10 @@ book:
 	cp -r chapters/06/images _build/html/chapters/06/
 	cp -r chapters/07/images _build/html/chapters/07/
 # 	cp -r chapters/19/images _build/html/chapters/19/
-
+	cp chapters/24/zipall.ipynb _build/html/chapters/24/
+	cp -r chapters/24/images _build/html/chapters/24/
 clean:
 	jb clean .
 
 deploy:
-	rsync -va _build/html/ gureckis_lab@gureckislab.org:/home/gureckis_lab/gureckislab.org/courses/fall20/labincp/
+	rsync -va _build/html/ gureckis_lab@gureckislab.org:/home/gureckis_lab/gureckislab.org/courses/spring21/labincp/

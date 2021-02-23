@@ -1,0 +1,90 @@
+# This script will let you create a schedule fairly easily.
+
+
+```python
+
+from datetime import datetime, date, timedelta
+
+format = '%A, %B %d, %Y'
+short_format = '%a %b %d'
+# 1. set the first day of classes
+first_day = 'Thursday, January 28, 2021'
+
+# 2. set the last day of class_variables
+last_day = 'Monday, May 10, 2021'
+
+# 3. set the recurring days of the weeks
+days_of_week = ['Monday','Wednesday']
+
+# 4. add in the date of the final exam
+final_exam_day = None
+
+# 4. list any exceptions for like holidays and the like
+holidays = {'Monday, February 15, 2021': 'President\'s Day', 'Friday, March 19, 2021': 'Long Weekend (Spring Break Replacement)', 'Monday, April 19, 2021': 'Long Weekend (Spring Break Replacement)'}
+
+# 5. add in any additional dates (most commonly legislative day where off cycle class meeting might happen)
+extra_days = {'Thursday, May 06, 2021': 'Legislative Day (classes meet on Monday schedule)'}
+
+
+# this part runs the script and prints to the terminal the dates
+first_day_f=datetime.strptime(first_day, format)
+last_day_f=datetime.strptime(last_day, format)
+
+# generator for all the days between two dates
+def daterange(start_date, end_date):
+  for n in range(int((end_date - start_date).days+1)):
+    yield start_date + timedelta(n)
+
+holidays_f = [datetime.strptime(x, format) for x in holidays.keys()]
+extra_days_f = [datetime.strptime(x, format) for x in extra_days.keys()]
+
+class_num = 1
+for single_date in daterange(first_day_f, last_day_f):
+  # limit to either the correct day of week
+  # or any additional days
+  # (single_date in extra_days_f): #
+  if (single_date.strftime('%A') in days_of_week) or (single_date in extra_days_f):
+
+    date_string = single_date.strftime(short_format)
+
+    reason = ''
+    if single_date in holidays_f:
+      reason = 'No class, ' + holidays[single_date.strftime(format)]
+      print(date_string + f' {reason}')
+    elif single_date in extra_days_f:
+      reason = 'special date, ' + extra_days[single_date.strftime(format)]
+      print(date_string + f', class {class_num}', f' {reason}')
+      class_num += 1
+    else:
+      print(date_string + f', class {class_num}')
+      class_num += 1
+
+
+```
+
+
+Next you need to define what is done each day of the class.  We'll do that with an array of dictionaries.
+
+
+```python
+
+class_content = []
+class_idx = 1
+class_agenda = {class_idx:
+ {'before': 'Read chapter 1',
+ 'during': 'Student presentation',
+ 'homework': '',
+ 'assessment': 'quiz'}}
+class_content.append(class_agenda)
+class_idx += 1
+
+class_agenda = {'mtgnum': class_idx,
+ 'before': 'Read chapter 2',
+ 'during': 'Student presentation',
+ 'homework': '',
+ 'assessment': 'quiz'}
+class_content.append(class_agenda)
+
+
+
+```

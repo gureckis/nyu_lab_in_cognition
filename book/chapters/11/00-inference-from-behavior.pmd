@@ -1,0 +1,69 @@
+```python
+from IPython.core.display import HTML, Markdown, display
+
+import numpy.random as npr
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import scipy.stats as stats
+```
+
+## Measuring Behavior
+
+```{note}
+This chapter authored [Todd M. Gureckis](http://gureckislab.org/~gureckis) and is released under the [license](/LICENSE.html) for the book.  [David Heeger](https://www.cns.nyu.edu/~david/) made several contributions by allowing sourcing some material from his lecture notes posted [here](https://www.cns.nyu.edu/~david/handouts/sdt/sdt.html).
+```
+
+The last few chapters have provided a review and update to your understanding of statistical analysis.  However, lets not lose sight of what we are analyzing and why.  In cognitive science, the goal is to understand the way the mind works.  However, we can only do this typically by observing the behavior of a person.  The goal of experimental approaches to behavior is to record how people behave in different circumstances and to infer from that aspect of how their mind must be functioning.
+
+In this chapter we are just going to step through some of the different measurements of behavior commonly used in research into human cognition and perception.  Our goal in this review is to make sure everyone is aware of these different measures, what they are good for, discuss some of the technical issues with the measure, and some of the issues in analysis and interpretation of these measures.  Generally when doing research projects researchers spend a lot of time discussing with their students and colleagues the best behavioral measures to use for the task at hand and so creatively using these measures is an important part of the scientific process.  The list we consider here is not comprehensive but gives a general overview of many of the most common measurement approaches.
+
+### Self-report
+
+Perhaps the most obvious approach to studying internal cognitive and perceptual processes is just to ask people questions.  Think of the classic Rorchact test which simply shows a subject an unfamiliar shape or picture and ask "what does this remind you of?"
+
+{numref}`fig:rorschach`
+
+```{figure} ./images/Four-examples-of-the-original-Rorschach-inkblots.png
+---
+width: 500px
+name: fig:rorschach
+---
+Examples of the original Rorschach inkblot stimuli.
+```
+
+In cognition our questions might be more targeted toward what is known as **introspection** about how a particular judgment, inference, or reason was made.  For example, if you see someone buy something in the store, you might ask "Why did you buy that item?" and "What can you tell me about the steps you took mentally when making that decision?"  To this a person might answer "Well, I always attend to price and quality when making supermarket purchases and so I weighted them carefully and decided that this particular product best met my needs."
+
+
+### Ratings
+
+- likert scales?
+- analysis of these types of scales?
+
+
+### Accuracy
+
+
+### Reaction time
+
+see this: https://lindeloev.shinyapps.io/shiny-rt/#1_opinion:_three_important_types_of_parameters
+
+
+### Mouse tracking
+
+{numref}`fig:mousetracking`
+
+```{figure} ./images/mouse-tracking-example.png
+---
+width: 500px
+name: fig:mousetracking
+---
+Examples of a mouse tracking experiment.
+```
+
+### Eye movements
+
+### Pupil dilation
+
+### Naturalistic Behavior
