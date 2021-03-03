@@ -11,7 +11,7 @@
 
 **Professor**: [Todd Gureckis](http://gureckislab.org), PhD  
 **Email**: todd.gureckis@nyu.edu  
-**Office Hours**: Wednesday 1-2pm (on [discord](https://discord.gg/t94ySpnAR8) or by appointment)  
+**Office Hours**: Wednesday 4-5pm (on [discord](https://discord.gg/t94ySpnAR8) or by appointment)  
 **Office**: the Interweb  
 
 **Teaching Assistant**:  Abitha Thankaraj  
