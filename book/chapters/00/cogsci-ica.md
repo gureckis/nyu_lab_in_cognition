@@ -1,4 +1,4 @@
-## Ch. 1 ICA
+# Intro to Cognitive Science ICA
 
 In this ICA (in class activity) we'll think a bit more about cognitive science and how to study the mind.
 
