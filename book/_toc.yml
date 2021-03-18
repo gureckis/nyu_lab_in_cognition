@@ -18,6 +18,8 @@
     title: EdStem (discussion)
   - url: https://github.com/gureckis/nyu_lab_in_cognition
     title: GitHub
+  - url: https://vimeo.com/showcase/8224818
+    title: Video Lectures
 
 - part: Textbook
   numbered: true
@@ -66,16 +68,16 @@
     # # ## TODO - add something on dangers of averaging
     # #
     # # # example describing operations
-    # - file: chapters/08/01-sampling # done
+    - file: chapters/08/01-sampling # done
     # # ## sampling examples?
     # # ## needs to add info about sampling distributions
     # # ## needs to add info about sampling from correlation that was in correlation chapter
-    # - file: chapters/09/00-hypothesistesting # done
+    - file: chapters/09/00-hypothesistesting # done
     # # ## add binomial here? direct probabilities?
     # # # some questions about hypothesis testing, framing the null, etc...
-    # - file: chapters/10/00-ttest # done
+    - file: chapters/10/00-ttest # done
     # # # example t-test calculations
-    # - file: chapters/13/00-linearregression # done
+    - file: chapters/13/00-linearregression # done
     # # ## things to add -
     # # # regression homework
     # #
@@ -149,19 +151,29 @@
 
 - part: Labs & Homeworks
   chapters:
+    - file: chapters/00/cogsci-ica.md
+      title: CogSci ICA (Ch 1)
     - file: homeworks/Homework1
       title: Intro to Jupyter (HW1)
     - file: chapters/03/python-ica.ipynb
       title: Python ICA (Ch 4)
     - file: chapters/04/design-ica.md
       title: Design ICA (Ch 5)
+    - file: homeworks/hw2/Homework2
+      title: Python for data (HW2)
+    - file: chapters/05/data-ica-1.ipynb
+      title: Data ICA (Ch 6)
+    - file: chapters/06/plots-ica.ipynb
+      title: Plotting ICA (Ch 6)
+    - file: homeworks/hw3.ipynb
+      title: Exploring Data Lab (HW3)
+
+    # - file: labs/PythonIntro
+    #   title: Intro to Python (HW1)
+
   # - url: https://docs.google.com/forms/d/e/1FAIpQLScqQUx1KTsunkto2N86Vqw3P30AwHYmbUGx6Vb_ZyZ8CHjj_g/viewform
   #   title: Pre-class Survey (HW0)
-  # - file: labs/PythonIntro
-  #   title: Intro to Python (HW1)
   # - file: homeworks/hw3/Homework3
-  #   title: Python Data Analysis (HW3)
-  # - file: labs/ExploringData
   #   title: Exploring Data
   # - file: labs/LabReg-IntroToRegression
   #   title: Intro to Regression
@@ -177,6 +189,8 @@
     - file: tips/pythonresources
     - file: tips/fortyforloops
     - file: tips/nyu-jupyterhub
+    - file: tips/ultimate-guide-ttest-python
+      title: Ultimate t-test guide
 
 
 - part: About
