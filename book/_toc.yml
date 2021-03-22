@@ -100,7 +100,7 @@
     # # ## needs to add something about why assumption of SD=1 makes sense
     # # ## needs to add information about how it is used in memory applications
     # #
-    # - file: chapters/21/00-ethics-irb
+    #- file: chapters/21/00-ethics-irb
     # # ## write
     # #
     # - file: chapters/22/00-programming-experiments
@@ -132,7 +132,7 @@
     # - file: chapters/19/00-writing
     # # ## example writing exercises
     # #
-    # - file: chapters/20/00-replication-opensci
+    #- file: chapters/20/replication-crisis-in-psychology
     # # ## write about replication
     # # ## exercises to explore osf
     # #
@@ -167,6 +167,8 @@
       title: Plotting ICA (Ch 6)
     - file: homeworks/hw3.ipynb
       title: Exploring Data Lab (HW3)
+    - file: chapters/08/sampling-ica.ipynb
+      title: Sampling ICA (Ch 9)
 
     # - file: labs/PythonIntro
     #   title: Intro to Python (HW1)
