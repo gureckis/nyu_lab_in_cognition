@@ -7,7 +7,6 @@
   - file: course-content/schedule
     title: Schedule
 
-
 - part: Resources
   chapters:
   - url: https://psychua-46002-spring.rcnyu.org/
@@ -77,20 +76,9 @@
     # # # some questions about hypothesis testing, framing the null, etc...
     - file: chapters/10/00-ttest # done
     # # # example t-test calculations
-    - file: chapters/13/00-linearregression # done
-    # # ## things to add -
-    # # # regression homework
-    # #
-    # - file: chapters/14/00-logisticregression
-    # # # practice with logistic regression
-    # #
-    # - file: chapters/15/00-mixed-effect
-    # # ## needs to blend several sources into something more coherent
-    # #
-    # #
-    # #
+
     # # ## needs the figures and references sorted out
-    # - file: chapters/11/00-inferences-from-behavior
+    - file: chapters/11/00-inferences-from-behavior
     # # # some questions about infering from different types of behavior
     # # # practice with SDT variables
     # #
@@ -99,8 +87,26 @@
     # # ## needs to add more information about why it is used in intro
     # # ## needs to add something about why assumption of SD=1 makes sense
     # # ## needs to add information about how it is used in memory applications
+    - file: chapters/21/00-ethics-irb
+    - file: chapters/22/00-programming-experiments
+    - file: chapters/23/00-online-data-collection
+
+    - file: chapters/13/00-linearregression # done
+    # # ## things to add -
+    # # # regression homework
     # #
-    #- file: chapters/21/00-ethics-irb
+    - file: chapters/15/00-mixed-effect
+    - file: chapters/14/00-logisticregression
+    # # # practice with logistic regression
+    # #
+    
+    # # ## needs to blend several sources into something more coherent
+    # #
+    # #
+    # #
+
+    # #
+    
     # # ## write
     # #
     # - file: chapters/22/00-programming-experiments
@@ -129,10 +135,10 @@
     # #
     # # ## needs to be written
     # #
-    # - file: chapters/19/00-writing
+    - file: chapters/19/00-writing
     # # ## example writing exercises
     # #
-    #- file: chapters/20/replication-crisis-in-psychology
+    - file: chapters/20/replication-crisis-in-psychology
     # # ## write about replication
     # # ## exercises to explore osf
     # #
@@ -140,7 +146,7 @@
     # #
     # # # - file: chapters/23/00-presentations
     # # ## write
-    # - file: chapters/24/00-what-next
+    - file: chapters/24/00-what-next
 
 
 # - part: Statistics Review
@@ -151,13 +157,13 @@
 
 - part: Labs & Homeworks
   chapters:
-    - file: chapters/00/cogsci-ica.md
-      title: CogSci ICA (Ch 1)
+    # - file: chapters/00/cogsci-ica.md
+    #   title: CogSci ICA (Ch 1)
     - file: homeworks/Homework1
       title: Intro to Jupyter (HW1)
     - file: chapters/03/python-ica.ipynb
       title: Python ICA (Ch 4)
-    - file: chapters/04/design-ica.md
+    - file: chapters/04/design-ica.ipynb
       title: Design ICA (Ch 5)
     - file: homeworks/hw2/Homework2
       title: Python for data (HW2)
@@ -169,6 +175,12 @@
       title: Exploring Data Lab (HW3)
     - file: chapters/08/sampling-ica.ipynb
       title: Sampling ICA (Ch 9)
+    - file: chapters/09/hypothesistesting-ica.ipynb
+      title: Hypotheses ICA (Ch 10)
+    - file: chapters/10/ttest-ica.ipynb
+      title: t-test ICA (Ch 11)
+    - file: labs/LabSDT-Pt1.ipynb
+      title: Signal Detection Theory (Lab 1.1)
 
     # - file: labs/PythonIntro
     #   title: Intro to Python (HW1)
@@ -189,6 +201,7 @@
 - part: Tips & Tricks
   chapters:
     - file: tips/pythonresources
+    - file: tips/plottingresources
     - file: tips/fortyforloops
     - file: tips/nyu-jupyterhub
     - file: tips/ultimate-guide-ttest-python
