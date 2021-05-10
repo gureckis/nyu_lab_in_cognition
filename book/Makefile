@@ -21,6 +21,7 @@ book:
 # 	cp -r chapters/19/images _build/html/chapters/19/
 	cp chapters/24/zipall.ipynb _build/html/chapters/24/
 	cp -r chapters/24/images _build/html/chapters/24/
+	cp -r labs/images _build/html/labs/
 clean:
 	jb clean .
 
