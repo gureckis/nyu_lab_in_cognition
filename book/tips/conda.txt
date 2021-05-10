@@ -7,3 +7,7 @@ conda install -c pog87 ptitprince
 conda install -c ejolly pymer4
 conda install pymc pystan
 pip install petpy
+
+# need node for ipycanvas
+conda install -c conda-forge nodejs
+jupyter labextension install @jupyter-widgets/jupyterlab-manager ipycanvas
