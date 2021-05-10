@@ -88,15 +88,18 @@
     # # ## needs to add something about why assumption of SD=1 makes sense
     # # ## needs to add information about how it is used in memory applications
     - file: chapters/21/00-ethics-irb
-    - file: chapters/22/00-programming-experiments
-    - file: chapters/23/00-online-data-collection
+    - file: chapters/20/replication-crisis-in-psychology
+    
+
+    # - file: chapters/22/00-programming-experiments
+    # - file: chapters/23/00-online-data-collection
 
     - file: chapters/13/00-linearregression # done
     # # ## things to add -
     # # # regression homework
     # #
-    - file: chapters/15/00-mixed-effect
     - file: chapters/14/00-logisticregression
+    - file: chapters/15/00-mixed-effect
     # # # practice with logistic regression
     # #
     
@@ -127,7 +130,6 @@
     # #
     # # ## need to be elaborated
     # #
-    # # - file: chapters/17/00-mri # done
     # # ## workbook on fMRI
     # # ## needs substantial clean up
     # #
@@ -135,10 +137,12 @@
     # #
     # # ## needs to be written
     # #
+    - file: chapters/16/00-mentalsimulation
+    - file: chapters/17/00-mri # done
     - file: chapters/19/00-writing
     # # ## example writing exercises
     # #
-    - file: chapters/20/replication-crisis-in-psychology
+    
     # # ## write about replication
     # # ## exercises to explore osf
     # #
@@ -181,6 +185,12 @@
       title: t-test ICA (Ch 11)
     - file: labs/LabSDT-Pt1.ipynb
       title: Signal Detection Theory (Lab 1.1)
+    - file: labs/LabSDT-Pt2.ipynb
+      title: Signal Detection Theory (Lab 1.2)
+    - file: labs/LabReg-IntroToRegression
+      title: Intro to Regression (Lab 2.1)
+    - file: labs/LabReg-MentalRotation
+      title: Intro to Regression (Lab 2.2)
 
     # - file: labs/PythonIntro
     #   title: Intro to Python (HW1)
