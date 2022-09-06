@@ -24,6 +24,7 @@ book:
 	cp -r labs/images _build/html/labs/
 clean:
 	jb clean .
-
+serve:
+	python -m http.server 8000 --directory _build/html
 deploy:
-	rsync -va _build/html/ gureckis_lab@gureckislab.org:/home/gureckis_lab/gureckislab.org/courses/spring21/labincp/
+	rsync -va _build/html/ gureckis_lab@gureckislab.org:/home/gureckis_lab/teaching.gureckislab.org/fall22/labincp/

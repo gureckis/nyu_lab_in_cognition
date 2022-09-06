@@ -3,11 +3,11 @@
 # LAB IN COGNITION AND PERCEPTION
 
 
-### PSYCH-UA.46 - Spring 2021
+### PSYCH-UA.46 - Fall 2022
 
 ### Instructors
 
-<img src='http://gureckislab.org/images/people/toddsmallnew.jpg' width='100'>
+<img src='http://old.gureckislab.org/images/people/toddsmallnew.jpg' width='100'>
 
 **Professor**: [Todd Gureckis](http://gureckislab.org), PhD  
 **Email**: todd.gureckis@nyu.edu  

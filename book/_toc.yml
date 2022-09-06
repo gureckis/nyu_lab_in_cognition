@@ -1,13 +1,13 @@
-- file: intro
-
-- part: Overview
+format: jb-book
+root: intro
+parts:
+- caption: Overview
   chapters:
   - file: course-content/syllabus
     title: Syllabus
   - file: course-content/schedule
     title: Schedule
-
-- part: Resources
+- caption: Resources
   chapters:
   - url: https://psychua-46002-spring.rcnyu.org/
     title: JupyterHub
@@ -19,206 +19,69 @@
     title: GitHub
   - url: https://vimeo.com/showcase/8224818
     title: Video Lectures
-
-- part: Textbook
+- caption: Textbook
   numbered: true
   chapters:
-    # idea make quizes be three questions on the chapter
-    # two python practices that are appropriate to the material so far
-    # idea, make there be one critical thinking exercise in each one https://www.apa.org/pubs/books/4318149
-    # videos = setup, conflict, resolution
-    #
-    - file: chapters/00/00-cogsci # done
-    # # some notebook with questions
-    #
-    # # light bulb hanging for b-roll, walking in a move it out of the way
-    # # overview of class and topics
-    # #
-    # # in class exercise: debate is the mind a computer?
-    # # describe what cogsci is
-    # # interview four faculty about: what is cog sci or perception
-    # # what is a good example of a tough question in cogsci?
-    # # if you want to do research in cog sci what types of skills do you need
-    # #
-    #
-    - file: chapters/01/00-whystats # done
-    # # some notebook with an example analysis that seems complex but we'll get there
-    # # in class exercise: why do we do statistics?
-    # # some personal test or something
-    - file: chapters/02/00-jupyter # done
-    # # some notebook practicing jupyter
-    # # setup, conflict, resolution
-    # # setup
-    - file: chapters/03/00-python # done
-    # # # the python homework
-    # # # cut out the stats part and just do programming
-    # # # blocks for variables
-    # # # a lot of jupyter overview
-    - file: chapters/04/00-researchdesign # done
-    # # # some questions about research design as markdown
-    # #
-    - file: chapters/05/00-data # done
-    # # # example data operations
-    # # # the little blocks on white camera
-    - file: chapters/06/00-plots  # done
-    # # # example plotting operations
-    # # # mapping between data and styles
-    - file: chapters/07/00-describingdata # done
-    # # ## TODO - add something on dangers of averaging
-    # #
-    # # # example describing operations
-    - file: chapters/08/01-sampling # done
-    # # ## sampling examples?
-    # # ## needs to add info about sampling distributions
-    # # ## needs to add info about sampling from correlation that was in correlation chapter
-    - file: chapters/09/00-hypothesistesting # done
-    # # ## add binomial here? direct probabilities?
-    # # # some questions about hypothesis testing, framing the null, etc...
-    - file: chapters/10/00-ttest # done
-    # # # example t-test calculations
-
-    # # ## needs the figures and references sorted out
-    - file: chapters/11/00-inferences-from-behavior
-    # # # some questions about infering from different types of behavior
-    # # # practice with SDT variables
-    # #
-    # # ## Measuring behavior
-    # # ## needs to add information about how to compute the statistics
-    # # ## needs to add more information about why it is used in intro
-    # # ## needs to add something about why assumption of SD=1 makes sense
-    # # ## needs to add information about how it is used in memory applications
-    - file: chapters/21/00-ethics-irb
-    - file: chapters/20/replication-crisis-in-psychology
-    
-
-    # - file: chapters/22/00-programming-experiments
-    # - file: chapters/23/00-online-data-collection
-
-    - file: chapters/13/00-linearregression # done
-    # # ## things to add -
-    # # # regression homework
-    # #
-    - file: chapters/14/00-logisticregression
-    - file: chapters/15/00-mixed-effect
-    # # # practice with logistic regression
-    # #
-    
-    # # ## needs to blend several sources into something more coherent
-    # #
-    # #
-    # #
-
-    # #
-    
-    # # ## write
-    # #
-    # - file: chapters/22/00-programming-experiments
-    # # ## write, using python?
-    # #
-    # - file: chapters/23/00-online-data-collection
-    # # ## write based on previous AMT talks?
-    # #
-    # #
-    # #
-    # # #- file: chapters/12/00-correlation
-    # # #  can delete this
-    # #
-    # #
-    # #
-    # # # questions about mental simuation
-    # # # tied to lab?
-    # #
-    # # ## need to be elaborated
-    # #
-    # # ## workbook on fMRI
-    # # ## needs substantial clean up
-    # #
-    # - file: chapters/25/00-computational-modeling.md
-    # #
-    # # ## needs to be written
-    # #
-    - file: chapters/16/00-mentalsimulation
-    - file: chapters/17/00-mri # done
-    - file: chapters/19/00-writing
-    # # ## example writing exercises
-    # #
-    
-    # # ## write about replication
-    # # ## exercises to explore osf
-    # #
-    # #
-    # #
-    # # # - file: chapters/23/00-presentations
-    # # ## write
-    - file: chapters/24/00-what-next
-
-
-# - part: Statistics Review
-#   numbered: true
-#   chapters:
-#     - file: chapters/06/00-probability
-#     - file: chapters/08/02-estimation
-
-- part: Labs & Homeworks
+  - file: chapters/00/00-cogsci
+  - file: chapters/01/00-whystats
+  - file: chapters/02/00-jupyter
+  - file: chapters/03/00-python
+  - file: chapters/04/00-researchdesign
+  - file: chapters/05/00-data
+  - file: chapters/06/00-plots
+  - file: chapters/07/00-describingdata
+  - file: chapters/08/01-sampling
+  - file: chapters/09/00-hypothesistesting
+  - file: chapters/10/00-ttest
+  - file: chapters/11/00-inferences-from-behavior
+  - file: chapters/21/00-ethics-irb
+  - file: chapters/20/replication-crisis-in-psychology
+  - file: chapters/13/00-linearregression
+  - file: chapters/14/00-logisticregression
+  - file: chapters/15/00-mixed-effect
+  - file: chapters/16/00-mentalsimulation
+  - file: chapters/17/00-mri
+  - file: chapters/19/00-writing
+  - file: chapters/24/00-what-next
+- caption: Labs & Homeworks
   chapters:
-    # - file: chapters/00/cogsci-ica.md
-    #   title: CogSci ICA (Ch 1)
-    - file: homeworks/Homework1
-      title: Intro to Jupyter (HW1)
-    - file: chapters/03/python-ica.ipynb
-      title: Python ICA (Ch 4)
-    - file: chapters/04/design-ica.ipynb
-      title: Design ICA (Ch 5)
-    - file: homeworks/hw2/Homework2
-      title: Python for data (HW2)
-    - file: chapters/05/data-ica-1.ipynb
-      title: Data ICA (Ch 6)
-    - file: chapters/06/plots-ica.ipynb
-      title: Plotting ICA (Ch 6)
-    - file: homeworks/hw3.ipynb
-      title: Exploring Data Lab (HW3)
-    - file: chapters/08/sampling-ica.ipynb
-      title: Sampling ICA (Ch 9)
-    - file: chapters/09/hypothesistesting-ica.ipynb
-      title: Hypotheses ICA (Ch 10)
-    - file: chapters/10/ttest-ica.ipynb
-      title: t-test ICA (Ch 11)
-    - file: labs/LabSDT-Pt1.ipynb
-      title: Signal Detection Theory (Lab 1.1)
-    - file: labs/LabSDT-Pt2.ipynb
-      title: Signal Detection Theory (Lab 1.2)
-    - file: labs/LabReg-IntroToRegression
-      title: Intro to Regression (Lab 2.1)
-    - file: labs/LabReg-MentalRotation
-      title: Intro to Regression (Lab 2.2)
-
-    # - file: labs/PythonIntro
-    #   title: Intro to Python (HW1)
-
-  # - url: https://docs.google.com/forms/d/e/1FAIpQLScqQUx1KTsunkto2N86Vqw3P30AwHYmbUGx6Vb_ZyZ8CHjj_g/viewform
-  #   title: Pre-class Survey (HW0)
-  # - file: homeworks/hw3/Homework3
-  #   title: Exploring Data
-  # - file: labs/LabReg-IntroToRegression
-  #   title: Intro to Regression
-  # - file: chapters/11/00-sdt # done
-  # ## add A' memory measure?
-  # - file: chapters/16/00-mentalsimulation # done
-  # - file: labs/LabReg-MRI-Pt1
-  # - file: chapters/18/00-rl # done
-  # ## needs to be finalized
-
-- part: Tips & Tricks
+  - file: homeworks/Homework1
+    title: Intro to Jupyter (HW1)
+  - file: chapters/03/python-ica.ipynb
+    title: Python ICA (Ch 4)
+  - file: chapters/04/design-ica.ipynb
+    title: Design ICA (Ch 5)
+  - file: homeworks/hw2/Homework2
+    title: Python for data (HW2)
+  - file: chapters/05/data-ica-1.ipynb
+    title: Data ICA (Ch 6)
+  - file: chapters/06/plots-ica.ipynb
+    title: Plotting ICA (Ch 6)
+  - file: homeworks/hw3.ipynb
+    title: Exploring Data Lab (HW3)
+  - file: chapters/08/sampling-ica.ipynb
+    title: Sampling ICA (Ch 9)
+  - file: chapters/09/hypothesistesting-ica.ipynb
+    title: Hypotheses ICA (Ch 10)
+  - file: chapters/10/ttest-ica.ipynb
+    title: t-test ICA (Ch 11)
+  - file: labs/LabSDT-Pt1.ipynb
+    title: Signal Detection Theory (Lab 1.1)
+  - file: labs/LabSDT-Pt2.ipynb
+    title: Signal Detection Theory (Lab 1.2)
+  - file: labs/LabReg-IntroToRegression
+    title: Intro to Regression (Lab 2.1)
+  - file: labs/LabReg-MentalRotation
+    title: Intro to Regression (Lab 2.2)
+- caption: Tips & Tricks
   chapters:
-    - file: tips/pythonresources
-    - file: tips/plottingresources
-    - file: tips/fortyforloops
-    - file: tips/nyu-jupyterhub
-    - file: tips/ultimate-guide-ttest-python
-      title: Ultimate t-test guide
-
-
-- part: About
+  - file: tips/pythonresources
+  - file: tips/plottingresources
+  - file: tips/fortyforloops
+  - file: tips/nyu-jupyterhub
+  - file: tips/ultimate-guide-ttest-python
+    title: Ultimate t-test guide
+- caption: About
   chapters:
-    - file: LICENSE
-      title: License
+  - file: LICENSE
+    title: License
