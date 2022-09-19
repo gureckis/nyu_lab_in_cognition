@@ -11,17 +11,17 @@
 
 **Professor**: [Todd Gureckis](http://gureckislab.org), PhD  
 **Email**: todd.gureckis@nyu.edu  
-**Office Hours**: Wednesday 4-5pm (on [discord](https://discord.gg/t94ySpnAR8) or by appointment)  
+**Office Hours**: Wednesday 4-5pm (or by appointment)  
 **Office**: the Interweb  
 
-**Teaching Assistant**:  Abitha Thankaraj  
-**Email**:  abitha@nyu.edu  
-**Office Hours**:  Mondays 2pm - 3pm  (on [discord](https://discord.gg/t94ySpnAR8))  
+**Teaching Assistant**: Richard He  
+**Email**:  qh2193@nyu.edu  
+**Office Hours**:  Thursday 4-5 pm (or by appointment)
 
 
 ### Place and Time
-Zoom (see zoom link in classes)  
-M&W: 10-11:50  
+Silver room 509, will try to record via zoom for those that miss  
+M&W: 11-12:15 
 
 ## Course Overview
 This course provides hands-on experience with the tools and practices used in psychological research. Students learn how to use a computer to collect, analyze, and report psychological data concerning a variety aspects of human cognition and perception.  By the end of the course students will have an first hand understanding of how to run psychological experiments, collect and analyze data, and write research reports.
@@ -32,7 +32,7 @@ This course is useful for undergraduate students interested in getting actively 
 <!-- #endregion -->
 
 ### Class Website
-http://gureckislab.org/courses/spring21/labincp
+[http://teaching.gureckislab.org/fall22/labincp](http://teaching.gureckislab.org/fall22/labincp)
 
 ### Credits and Degree Progress
 This class is worth four credit hours and applies to the lab requirement for the psychology major.
@@ -44,12 +44,11 @@ You are looking at it!  You will refer to this website for reading, lecture slid
 PSYCH-UA 10 (Statistical reasoning for the behavioral sciences), PSYCH-UA 11 (Adavance psychological statistics) and one of the following: PSYCH-UA 22 (Perception), PSYCH-UA 25 (Cognitive Neuroscience), or PSYCH-UA 29 (COGNITION). Permission of the instructor may be obtained in certain cases.
 
 ## Computing Environment
-The course will rely on a online computing environment called Jupyter.  Each student will have their own JupyterHub instance and can connect to this from a variety of devices over the internet.  The address of the class JupyterHub is [https://psychua-46002-spring.rcnyu.org/](https://psychua-46002-spring.rcnyu.org/).  You will log in with your normal NYUHome credentials.
+The course will rely on a online computing environment called Jupyter.  Each student will have their own JupyterHub instance and can connect to this from a variety of devices over the internet.  The address of the class JupyterHub is [https://psychua-46-fall.rcnyu.org](https://psychua-46-fall.rcnyu.org).  You will log in with your normal NYUHome credentials.
 
 ## Communication
-We will use [EdStem](https://edstem.org/us/courses/4282/discussion/) to facilitate discussion outside of class.  You can post questions about any of the course content and the TA or instructor will try their best to respond quickly.  By asking your question on the public forum you can learn from the questions and answers of your fellow students. 
+We will use [EdStem](https://edstem.org/us/courses/28517/discussion/) to facilitate discussion outside of class.  You can post questions about any of the course content and the TA or instructor will try their best to respond quickly.  By asking your question on the public forum you can learn from the questions and answers of your fellow students. 
 
-In addition, Prof Gureckis will hold office hours on [dischord](https://discord.com).  You can easily pop into a ask a question via chat or audio or video, whatever works for you.  The link to the server is here: [https://discord.gg/4AAb9jHZ](https://discord.gg/4AAb9jHZ).
 
 ## Schedule
 
