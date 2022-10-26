@@ -16,6 +16,9 @@ execute:
 parse:
   myst_extended_syntax: true
 
+bibtex_bibfiles:
+    - references.bib
+    
 repository:
   url: https://github.com/gureckis/nyu_lab_in_cognition
   path_to_book: book/
