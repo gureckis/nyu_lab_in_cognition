@@ -55,7 +55,7 @@ parts:
     title: Data ICA (Ch 6)
   - file: chapters/06/plots-ica.ipynb
     title: Plotting ICA (Ch 6)
-  - file: homeworks/hw3.ipynb
+  - file: homeworks/Homework3
     title: Exploring Data Lab (HW3)
   - file: chapters/08/sampling-ica.ipynb
     title: Sampling ICA (Ch 9)
