@@ -35,11 +35,11 @@ parts:
   - file: chapters/21/00-ethics-irb
   - file: chapters/20/replication-crisis-in-psychology
   - file: chapters/13/00-linearregression
-  - file: chapters/14/00-logisticregression
-  - file: chapters/15/00-mixed-effect
-  - file: chapters/16/00-mentalsimulation
-  - file: chapters/17/00-mri
-  - file: chapters/19/00-writing
+  # - file: chapters/14/00-logisticregression
+  # - file: chapters/15/00-mixed-effect
+  # - file: chapters/16/00-mentalsimulation
+  # - file: chapters/17/00-mri
+  # - file: chapters/19/00-writing
   - file: chapters/24/00-what-next
 - caption: Labs & Homeworks
   chapters:
@@ -67,10 +67,8 @@ parts:
     title: Signal Detection Theory (Lab 1.1)
   - file: labs/LabSDT-Pt2.ipynb
     title: Signal Detection Theory (Lab 1.2)
-  - file: labs/LabReg-IntroToRegression
+  - file: labs/LabReg-IntroToRegression-short.ipynb
     title: Intro to Regression (Lab 2.1)
-  - file: labs/LabReg-MentalRotation
-    title: Intro to Regression (Lab 2.2)
 - caption: Tips & Tricks
   chapters:
   - file: tips/pythonresources

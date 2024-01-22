@@ -1,0 +1,9 @@
+{
+    "grammarly.selectors": [
+        {
+            "language": "latex",
+            "scheme": "file",
+            "pattern": "/Users/gureckis/Desktop/linzentenure.tex"
+        }
+    ]
+}
