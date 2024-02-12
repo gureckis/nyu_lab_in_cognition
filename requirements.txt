@@ -116,7 +116,7 @@ tinycss2==1.1.1
 tornado==6.2
 traitlets==5.8.1
 uc-micro-py==1.0.1
-urllib3==1.26.12
+urllib3==1.26.18
 wcwidth==0.2.5
 webencodings==0.5.1
 websocket-client==1.4.1
