@@ -3,7 +3,7 @@
 # LAB IN COGNITION AND PERCEPTION
 
 
-### PSYCH-UA.46 - Fall 2022
+### PSYCH-UA.46 - Spring 2024
 
 ### Instructors
 
@@ -11,17 +11,18 @@
 
 **Professor**: [Todd Gureckis](http://gureckislab.org), PhD  
 **Email**: todd.gureckis@nyu.edu  
-**Office Hours**: Wednesday 4-5pm (or by appointment)  
-**Office**: the Interweb  
+**Office Hours**: Wednesday 2-3pm (or by appointment)  
+**Office**: Zoom or 575  
 
-**Teaching Assistant**: Richard He  
-**Email**:  qh2193@nyu.edu  
-**Office Hours**:  Thursday 4-5 pm (or by appointment)
+**Teaching Assistant**: Marco Lai  
+**Email**:  cl5564@nyu.edu  
+**Office Hours**:  Friday 1-2pm (or by appointment)  
+**Office**: 10 Washington Place (Department of Linguistics), 6 floor
 
 
 ### Place and Time
-Silver room 509, will try to record via zoom for those that miss  
-M&W: 11-12:15 
+Meyer Room 159, will try to record via zoom for those that miss  
+T&TH: 11-12:15 
 
 ## Course Overview
 This course provides hands-on experience with the tools and practices used in psychological research. Students learn how to use a computer to collect, analyze, and report psychological data concerning a variety aspects of human cognition and perception.  By the end of the course students will have an first hand understanding of how to run psychological experiments, collect and analyze data, and write research reports.
@@ -32,7 +33,7 @@ This course is useful for undergraduate students interested in getting actively 
 <!-- #endregion -->
 
 ### Class Website
-[http://teaching.gureckislab.org/fall22/labincp](http://teaching.gureckislab.org/fall22/labincp)
+[http://teaching.gureckislab.org/spring24/labincp](http://teaching.gureckislab.org/spring24/labincp)
 
 ### Credits and Degree Progress
 This class is worth four credit hours and applies to the lab requirement for the psychology major.
@@ -44,10 +45,10 @@ You are looking at it!  You will refer to this website for reading, lecture slid
 PSYCH-UA 10 (Statistical reasoning for the behavioral sciences), PSYCH-UA 11 (Adavance psychological statistics) and one of the following: PSYCH-UA 22 (Perception), PSYCH-UA 25 (Cognitive Neuroscience), or PSYCH-UA 29 (COGNITION). Permission of the instructor may be obtained in certain cases.
 
 ## Computing Environment
-The course will rely on a online computing environment called Jupyter.  Each student will have their own JupyterHub instance and can connect to this from a variety of devices over the internet.  The address of the class JupyterHub is [https://psychua-46-fall.rcnyu.org](https://psychua-46-fall.rcnyu.org).  You will log in with your normal NYUHome credentials.
+The course will rely on a online computing environment called Jupyter.  Each student will have their own JupyterHub instance and can connect to this from a variety of devices over the internet.  The address of the class JupyterHub is [https://psychua-46-spring.rcnyu.org](https://psychua-46-spring.rcnyu.org).  You will log in with your normal NYUHome credentials.
 
 ## Communication
-We will use [EdStem](https://edstem.org/us/courses/28517/discussion/) to facilitate discussion outside of class.  You can post questions about any of the course content and the TA or instructor will try their best to respond quickly.  By asking your question on the public forum you can learn from the questions and answers of your fellow students. 
+We will use [EdStem](https://edstem.org/us/courses/56149/discussion/) to facilitate discussion outside of class.  You can post questions about any of the course content and the TA or instructor will try their best to respond quickly.  By asking your question on the public forum you can learn from the questions and answers of your fellow students. 
 
 
 ## Schedule
@@ -58,7 +59,7 @@ Each class will be divided into several parts.  Sometimes there will be a short 
 The grade in the course will be determined by the following categories:
 
 ### Class Participation (10% of grade)
-Attendance and participation in lectures and labs is essential given the hands on nature of the course.  Each class period we will record attendance based on being logged into Zoom and participation and attendance will be counted.  Two "free"/"no excuse" absences are automatically granted.  You do not need to tell me the reason but connect with other students or the TA to find out what you missed.  Otherwise, please get in touch in advance if you expect to miss class.
+Attendance and participation in lectures and labs is essential given the hands on nature of the course.  Each class period we will record attendance based on responses to the in class-quick. Two "free"/"no excuse" absences are automatically granted.  You do not need to tell me the reason but connect with other students or the TA to find out what you missed.  Otherwise, please get in touch in advance if you expect to miss class.
 
 ### Quizzes (10% of grade)
 Short quizzes over the assigned reading and videos will be assigned in class at the start of each lecture.  
@@ -110,7 +111,7 @@ For students who would benefit from assistive technology but don’t  wish to re
 All papers and presentations are due at the date and time specified.  Scores for late papers will be reduced by 10% for every 24-hour period a paper is late. No extensions will be granted due to computer failure, roommate difficulties, printing problems, etc.
 
 ### Technology
-Due to the online nature of the course, we will use a variety of technical tools including Zoom, EdStem, Dischord, Jupyter, etc... to facilitate our work together.  You will need to have a strong internet connection during class time and so I would recommend you try to work that out early on in the semester.  If you have internet connection issues let me know and we can discuss it and work together to find a solution because being online and in class is important.
+Due to the online nature of the course, we will use a variety of technical tools including EdStem, Jupyter, etc... to facilitate our work together.  You will need to have a strong internet connection during class time and so I would recommend you try to work that out early on in the semester.  If you have internet connection issues let me know and we can discuss it and work together to find a solution because being online and in class is important.
 
 ### Disabilities
 Any student with a documented disability needing academic adjustments or accommodations is requested to speak with me by the end of the second week of the term.

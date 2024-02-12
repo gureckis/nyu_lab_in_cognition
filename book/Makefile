@@ -27,4 +27,4 @@ clean:
 serve:
 	python -m http.server 8000 --directory _build/html
 deploy:
-	rsync -va _build/html/ gureckis_lab@gureckislab.org:/home/gureckis_lab/teaching.gureckislab.org/fall22/labincp/
+	rsync -va _build/html/ gureckis_lab@gureckislab.org:/home/gureckis_lab/teaching.gureckislab.org/spring24/labincp/

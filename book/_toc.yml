@@ -9,9 +9,9 @@ parts:
     title: Schedule
 - caption: Resources
   chapters:
-  - url: https://psychua-46-fall.rcnyu.org
+  - url: https://psychua-46-spring.rcnyu.org
     title: JupyterHub
-  - url: https://edstem.org/us/courses/28517/discussion/
+  - url: https://edstem.org/us/courses/56149/discussion/
     title: EdStem (discussion)
   - url: https://github.com/gureckis/nyu_lab_in_cognition
     title: GitHub
