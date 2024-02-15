@@ -1,4 +1,4 @@
-conda create --name cognition python=3.7
+conda create --name cognition python=3.8
 conda activate cognition
 conda install ipykernel
 conda install pandas=2.2.0
