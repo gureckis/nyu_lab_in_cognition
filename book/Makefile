@@ -6,7 +6,6 @@ help:
 	@echo "  clean       to clean out site build files"
 	@echo "  deploy      copy to the lab website"
 
-
 book:
 	jupyter-book build ./
 	cp -r lectures _build/html/
@@ -23,9 +22,12 @@ book:
 	cp -r chapters/24/images _build/html/chapters/24/
 	cp -r labs/images _build/html/labs/
 	chmod -R ugo+r _build/html/
+
 clean:
 	jb clean .
+
 serve:
 	python -m http.server 8000 --directory _build/html
+
 deploy:
-	rsync -va _build/html/ gureckis_lab@gureckislab.org:/home/gureckis_lab/teaching.gureckislab.org/spring24/labincp/
+	rsync -va _build/html/ gureckis_lab@gureckislab.org:/home/gureckis_lab/teaching.gureckislab.org/labincp/

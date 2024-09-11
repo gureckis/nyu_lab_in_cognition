@@ -1,4 +1,7 @@
-conda create --name cognition python=3.8
+conda create --name cognition python=3.10
+conda install ipykernel pandas=2.2.0 seaborn=0.12.2 matplotlib=3.8.2 pingouin=0.5.4 statsmodels=0.14.1
+conda 
+
 conda activate cognition
 conda install ipykernel
 conda install pandas=2.2.0
