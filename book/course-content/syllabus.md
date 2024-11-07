@@ -12,7 +12,7 @@
 
 **Professor**: [Todd Gureckis](http://gureckislab.org), PhD  
 **Email**: todd.gureckis@nyu.edu  
-**Office Hours**: Wednesday 2-3pm (or by appointment)  
+**Office Hours**: Tuesday 2-3pm (or by appointment)  
 **Office**: Zoom or 575  
 
 **Teaching Assistant**: Marco Lai  
